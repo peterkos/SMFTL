@@ -282,6 +282,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CAUV8X6AAP;
 				INFOPLIST_FILE = "Save Me From The Light/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "uw.Save-Me-From-The-Light";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -297,6 +298,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CAUV8X6AAP;
 				INFOPLIST_FILE = "Save Me From The Light/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "uw.Save-Me-From-The-Light";
 				PRODUCT_NAME = "$(TARGET_NAME)";
