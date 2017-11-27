@@ -49,28 +49,6 @@ class ViewController: UIViewController {
 		print("State: \(printState(UIDevice.current.batteryState.rawValue))")
 		print("Level: \(UIDevice.current.batteryLevel)")
 		
-		
-		// Draw a snazzy angled background
-		// View color is defined here!
-		let shape = CAShapeLayer()
-		shape.fillColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
-		view.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
-		
-		let path = UIBezierPath()
-		// The actual distance above above the bottom of the screen, including "angle"
-		let bottomMargin = CGFloat(view.frame.size.height * 0.25)
-		let marginGap = CGFloat(100)
-		
-		// Lines and math
-		path.move(to: CGPoint(x: 0, y: view.frame.size.height))
-		path.addLine(to: CGPoint(x: view.frame.size.width, y: view.frame.size.height))
-		path.addLine(to: CGPoint(x: view.frame.size.width, y: view.frame.size.height - bottomMargin - marginGap))
-		path.addLine(to: CGPoint(x: 0, y: view.frame.size.height - bottomMargin))
-		path.close()
-		shape.path = path.cgPath
-		
-		view.layer.addSublayer(shape)
-		
 	}
 	
 	override func didReceiveMemoryWarning() {
