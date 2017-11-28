@@ -11,17 +11,30 @@ import UIKit
 @IBDesignable
 class ColoredView: UIView {
 	
+	
+	@IBInspectable var shapeFillColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+	
+	override func prepareForInterfaceBuilder() {
+		super.prepareForInterfaceBuilder()
+		//setup your view with the settings
+	}
+	
     override func draw(_ rect: CGRect) {
+		super.draw(rect)
+		
+		// Set background color
+		// TODO: manually changing background color doesn't work?
+		// 		 See https://stackoverflow.com/a/23593656
+		UIColor.white.setFill()
+		UIRectFill(rect)
 		
 		// Draw a snazzy angled background
-		// View color is defined here!
 		let shape = CAShapeLayer()
-		self.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
-		shape.fillColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+		shape.fillColor = shapeFillColor.cgColor
 
 		let path = UIBezierPath()
 		// The actual distance above the bottom of the screen, including "angle"
-		let bottomMargin = CGFloat(self.frame.size.height * 0.25)
+		let bottomMargin = CGFloat(self.frame.size.height * 0.20)
 		let marginGap = CGFloat(100)
 
 		// Lines and math
