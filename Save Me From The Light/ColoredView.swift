@@ -11,7 +11,6 @@ import UIKit
 @IBDesignable
 class ColoredView: UIView {
 	
-	
 	@IBInspectable var shapeFillColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
 	
 	override func prepareForInterfaceBuilder() {
@@ -31,20 +30,13 @@ class ColoredView: UIView {
 		// Draw a snazzy angled background
 		let shape = CAShapeLayer()
 		shape.fillColor = shapeFillColor.cgColor
-
-		let path = UIBezierPath()
-		// The actual distance above the bottom of the screen, including "angle"
-		let bottomMargin = CGFloat(self.frame.size.height * 0.20)
-		let marginGap = CGFloat(100)
+		
 
 		// Lines and math
-		path.move(to: CGPoint(x: 0, y: self.frame.size.height))
-		path.addLine(to: CGPoint(x: self.frame.size.width, y: self.frame.size.height))
-		path.addLine(to: CGPoint(x: self.frame.size.width, y: self.frame.size.height - bottomMargin - marginGap))
-		path.addLine(to: CGPoint(x: 0, y: self.frame.size.height - bottomMargin))
-		path.close()
-		shape.path = path.cgPath
+		shape.path = Constants(withView: self).path.cgPath
 
+		// TODO: Move to external method?
+		// Review draw() paradigms!
 		self.layer.addSublayer(shape)
 
     }
