@@ -11,21 +11,6 @@ import UIKit
 class VoicePackPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 	
 	var pages = [UIViewController]()
-
-	override func viewWillLayoutSubviews() {
-		super.viewWillLayoutSubviews()
-		// TODO: Get rectangle bounds to map to page view!
-		//		if let coloredViewVC = parent?.view as? ColoredView {
-		//			NSLog("PVC: \(coloredViewVC.path.bounds)")
-		//			self.view.bounds = coloredViewVC.path.bounds
-		//		}
-	}
-	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		
-
-	}
 	
     override func viewDidLoad() {
         super.viewDidLoad()

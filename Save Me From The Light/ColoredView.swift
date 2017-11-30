@@ -29,11 +29,12 @@ class ColoredView: UIView {
 		
 		// Draw a snazzy angled background
 		let shape = CAShapeLayer()
-		shape.fillColor = shapeFillColor.cgColor
+//		shape.fillColor = shapeFillColor.cgColor
+		shape.fillColor = nil
 		
 
 		// Lines and math
-		shape.path = Constants(withView: self).path.cgPath
+		shape.path = Constants(withViewFrame: self.frame).path.cgPath
 
 		// TODO: Move to external method?
 		// Review draw() paradigms!

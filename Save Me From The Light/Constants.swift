@@ -14,7 +14,7 @@ import UIKit
 struct Constants {
 	
 	// View for view modifying
-	var currentView: UIView
+	var currentViewFrame: CGRect
 	
 	// Path of classy bottom shape
 	let path = UIBezierPath()
@@ -23,9 +23,9 @@ struct Constants {
 	let bottomMargin: CGFloat
 	let marginGap: CGFloat
 	
-	init(withView view: UIView) {
-		currentView = view
-		bottomMargin =  CGFloat(currentView.frame.size.height * 0.20)
+	init(withViewFrame frame: CGRect) {
+		currentViewFrame = frame
+		bottomMargin =  CGFloat(currentViewFrame.size.height * 0.20)
 		marginGap = CGFloat(100)
 		
 		configurePath()
@@ -33,10 +33,10 @@ struct Constants {
 
 	// The drawing of the fun shape on the bottom
 	func configurePath() {
-		path.move(to: CGPoint(x: 0, y: currentView.frame.size.height))
-		path.addLine(to: CGPoint(x: currentView.frame.size.width, y: currentView.frame.size.height))
-		path.addLine(to: CGPoint(x: currentView.frame.size.width, y: currentView.frame.size.height - bottomMargin - marginGap))
-		path.addLine(to: CGPoint(x: 0, y: currentView.frame.size.height - bottomMargin))
+		path.move(to: CGPoint(x: 0, y: currentViewFrame.size.height))
+		path.addLine(to: CGPoint(x: currentViewFrame.size.width, y: currentViewFrame.size.height))
+		path.addLine(to: CGPoint(x: currentViewFrame.size.width, y: currentViewFrame.size.height - bottomMargin - marginGap))
+		path.addLine(to: CGPoint(x: 0, y: currentViewFrame.size.height - bottomMargin))
 		path.close()
 	}
 
