@@ -36,26 +36,6 @@ class ViewController: UIViewController {
 		}
 	}
 	
-	
-	override func viewWillLayoutSubviews() {
-		super.viewWillLayoutSubviews()
-		
-		// Create a custom container view
-		// This is required to set custom bounds on the container
-		// i.e., fill the trapezoidal shape bounds found in Constants.
-		// TODO: Set autoresizing mask?
-		let customContainer = storyboard!.instantiateViewController(withIdentifier: "customContainerViewController")
-		self.addChildViewController(customContainer)
-		self.view.addSubview(customContainer.view)
-		
-		// The size below is reset by a custom CALayer in CustomContainerView
-//		customContainer.view.frame = Constants(withViewFrame: self.view.frame).path.bounds
-//		customContainer.didMove(toParentViewController: self)
-		
-		print("VCs: \(self.childViewControllers)")
-	}
-	
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 

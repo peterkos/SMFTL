@@ -19,7 +19,7 @@ class VoicePackPageViewController: UIPageViewController, UIPageViewControllerDat
 		self.dataSource = self
 		
 		// Label for each voice pack
-		// TODO: Expand to full VC
+		// TODO: Make functional sound previws!
 		let voicePack1 = storyboard!.instantiateViewController(withIdentifier: "voicePack1")
 		let voicePack2 = storyboard!.instantiateViewController(withIdentifier: "voicePack2")
 		let voicePack3 = storyboard!.instantiateViewController(withIdentifier: "voicePack3")
@@ -31,29 +31,6 @@ class VoicePackPageViewController: UIPageViewController, UIPageViewControllerDat
 		setViewControllers([pages.first!], direction: .forward, animated: true, completion: nil)
 		
     }
-	
-	override func viewWillLayoutSubviews() {
-		super.viewWillLayoutSubviews()
-		
-		guard pages.count > 0 else {
-			fatalError("Pages not instantiated before subview layout!")
-		}
-		
-//		let shapeLayer = CAShapeLayer()
-//		shapeLayer.frame = Constants(withViewFrame: self.view.frame).path.bounds
-//		shapeLayer.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-//		shapeLayer.fillColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-//		
-		for vc in pages {
-			if (vc.view as? CustomContainerView) != nil {
-				print("hell yea!")
-			}
-//			vc.view.frame = Constants(withViewFrame: self.view.frame).path.bounds
-//			vc.view.layer.insertSublayer(shapeLayer, at: 0)
-		}
-		
-		
-	}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -10,28 +10,29 @@ import UIKit
 
 class CustomContainerView: UIView {
 
-	override init(frame: CGRect) {
-		super.init(frame: frame)
-		customInit()
-	}
+	private let shapeFillColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
 	
-	required init?(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder)
-		customInit()
-	}
-	
-	private func customInit() {
-		let layerMask = CAShapeLayer()
-		layerMask.fillColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-		layerMask.path = customPath().cgPath
-		self.layer.addSublayer(layerMask)
+	override func draw(_ rect: CGRect) {
+		super.draw(rect)
 		
-		self.layer.mask = layerMask
+		// Set background color
+		// TODO: manually changing background color doesn't work?
+		// 		 See https://stackoverflow.com/a/23593656
+		
+		// Draw a snazzy angled background
+		self.backgroundColor = UIColor.white
+		
+		let shape = CAShapeLayer()
+		shape.fillColor = shapeFillColor.cgColor
+		shape.path = customPath().cgPath
+		self.layer.addSublayer(shape)
+		
 	}
 	
 	func customPath() -> UIBezierPath {
 		
 		let path = UIBezierPath()
+		// The actual distance above the bottom of the screen, including "angle"
 		let bottomMargin =  CGFloat(frame.size.height * 0.20)
 		let marginGap = CGFloat(100)
 		
