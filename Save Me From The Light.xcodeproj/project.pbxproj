@@ -15,6 +15,10 @@
 		0E953FE41FC00C5000D6D6E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E953FE21FC00C5000D6D6E6 /* LaunchScreen.storyboard */; };
 		0E980E0A1FCE13E800F5ABED /* VoicePackPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E980E091FCE13E800F5ABED /* VoicePackPageViewController.swift */; };
 		0EA5A49E1FCB68E000C527B2 /* SwiftySound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA5A49D1FCB68E000C527B2 /* SwiftySound.framework */; };
+		0EF455BD1FE7A6BB00078FF6 /* VoicePack1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF455BC1FE7A6BB00078FF6 /* VoicePack1ViewController.swift */; };
+		0EF455BF1FE7A6C400078FF6 /* VoicePack2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF455BE1FE7A6C400078FF6 /* VoicePack2ViewController.swift */; };
+		0EF455C11FE7A6CC00078FF6 /* VoicePack3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF455C01FE7A6CC00078FF6 /* VoicePack3ViewController.swift */; };
+		0EF455C31FE7A6F300078FF6 /* BatteryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF455C21FE7A6F300078FF6 /* BatteryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		0E953FE51FC00C5000D6D6E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E980E091FCE13E800F5ABED /* VoicePackPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePackPageViewController.swift; sourceTree = "<group>"; };
 		0EA5A49D1FCB68E000C527B2 /* SwiftySound.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftySound.framework; path = Carthage/Build/iOS/SwiftySound.framework; sourceTree = "<group>"; };
+		0EF455BC1FE7A6BB00078FF6 /* VoicePack1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePack1ViewController.swift; sourceTree = "<group>"; };
+		0EF455BE1FE7A6C400078FF6 /* VoicePack2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePack2ViewController.swift; sourceTree = "<group>"; };
+		0EF455C01FE7A6CC00078FF6 /* VoicePack3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePack3ViewController.swift; sourceTree = "<group>"; };
+		0EF455C21FE7A6F300078FF6 /* BatteryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 		0E953FD81FC00C5000D6D6E6 /* Save Me From The Light */ = {
 			isa = PBXGroup;
 			children = (
+				0EF455BB1FE7A69400078FF6 /* SoundPackViews */,
 				0E953FD91FC00C5000D6D6E6 /* AppDelegate.swift */,
 				0E953FDB1FC00C5000D6D6E6 /* ViewController.swift */,
 				0E953FDD1FC00C5000D6D6E6 /* Main.storyboard */,
@@ -70,6 +79,7 @@
 				0E953FE01FC00C5000D6D6E6 /* Assets.xcassets */,
 				0E953FE21FC00C5000D6D6E6 /* LaunchScreen.storyboard */,
 				0E953FE51FC00C5000D6D6E6 /* Info.plist */,
+				0EF455C21FE7A6F300078FF6 /* BatteryModel.swift */,
 			);
 			path = "Save Me From The Light";
 			sourceTree = "<group>";
@@ -80,6 +90,16 @@
 				0EA5A49D1FCB68E000C527B2 /* SwiftySound.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0EF455BB1FE7A69400078FF6 /* SoundPackViews */ = {
+			isa = PBXGroup;
+			children = (
+				0EF455BC1FE7A6BB00078FF6 /* VoicePack1ViewController.swift */,
+				0EF455BE1FE7A6C400078FF6 /* VoicePack2ViewController.swift */,
+				0EF455C01FE7A6CC00078FF6 /* VoicePack3ViewController.swift */,
+			);
+			path = SoundPackViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,10 +197,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EF455BD1FE7A6BB00078FF6 /* VoicePack1ViewController.swift in Sources */,
+				0EF455C31FE7A6F300078FF6 /* BatteryModel.swift in Sources */,
+				0EF455BF1FE7A6C400078FF6 /* VoicePack2ViewController.swift in Sources */,
 				0E16178C1FD7934E00756645 /* CustomContainerView.swift in Sources */,
 				0E953FDC1FC00C5000D6D6E6 /* ViewController.swift in Sources */,
 				0E953FDA1FC00C5000D6D6E6 /* AppDelegate.swift in Sources */,
 				0E980E0A1FCE13E800F5ABED /* VoicePackPageViewController.swift in Sources */,
+				0EF455C11FE7A6CC00078FF6 /* VoicePack3ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

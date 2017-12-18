@@ -12,51 +12,43 @@ import SwiftySound
 
 class ViewController: UIViewController {
 	
-	var batteryLevel: Float {
-		return UIDevice.current.batteryLevel
+	// Literally saving two words here
+	private let userDeafults = UserDefaults.standard
+	
+	// OUTLETS for reading settings
+	@IBOutlet var tenPercentWarningSetting: UISwitch!
+	@IBOutlet var fivePercentWarningSetting: UISwitch!
+	@IBOutlet var onePercentWarningSetting: UISwitch!
+	
+	
+	// TODO: Move to Constants file
+	// ACTIONS for setting data
+	@IBAction func tenPercentWarningSetting(_ sender: UISwitch) {
+		userDeafults.set(sender.isOn, forKey: "tenPercentWarning")
 	}
 	
-	@objc func batteryStateDidChange(_ notification: Notification) {
-		// State change
-		// Reset message when plugged in
+	@IBAction func fivePercentWarningSetting(_ sender: UISwitch) {
+		userDeafults.set(sender.isOn, forKey: "fivePercentWarning")
 	}
 	
-	@objc func batteryLevelDidChange(_ notification: Notification) {
-		// Level change
-		// Play sound when < 10%, 5%, etc.
-	}
-	
-	// Useful print state function
-	func printState(_ state: Int) -> String {
-		switch UIDevice.current.batteryState {
-		case .charging:  return "Charging!"
-		case .full:		 return "Full!"
-		case .unknown:	 return "Unknown?"
-		case .unplugged: return "Unplugged."
-		}
+	@IBAction func onePercentWarningSetting(_ sender: UISwitch) {
+		userDeafults.set(sender.isOn, forKey: "onePercentWarning")
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
-		UIDevice.current.isBatteryMonitoringEnabled = true
+		userDeafults.synchronize()
 		
-		// Observers for level & state change
-		NotificationCenter.default.addObserver(self, selector: #selector(batteryStateDidChange),
-											   name: .UIDeviceBatteryStateDidChange, object: nil)
-		NotificationCenter.default.addObserver(self, selector: #selector(batteryLevelDidChange),
-											   name: .UIDeviceBatteryLevelDidChange, object: nil)
-		
-		print("State: \(printState(UIDevice.current.batteryState.rawValue))")
-		print("Level: \(UIDevice.current.batteryLevel)")
-		
+		// Set switches on load
+		tenPercentWarningSetting.isOn  = userDeafults.bool(forKey: "tenPercentWarning")
+		fivePercentWarningSetting.isOn = userDeafults.bool(forKey: "fivePercentWarning")
+		onePercentWarningSetting.isOn  = userDeafults.bool(forKey: "onePercentWarning")
 	}
 	
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
+		userDeafults.synchronize()
 	}
-
 
 }
 

@@ -26,6 +26,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8sa-wq-c6D">
                                 <rect key="frame" x="241" y="279" width="51" height="31"/>
+                                <connections>
+                                    <action selector="tenPercentWarningSetting:" destination="BYZ-38-t0r" eventType="valueChanged" id="EuC-nc-jqG"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5% Warning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Of-oy-Pv4">
                                 <rect key="frame" x="84" y="323" width="99" height="21"/>
@@ -35,6 +38,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K6L-tv-4lZ">
                                 <rect key="frame" x="241" y="318" width="51" height="31"/>
+                                <connections>
+                                    <action selector="fivePercentWarningSetting:" destination="BYZ-38-t0r" eventType="valueChanged" id="JoQ-Pl-HkY"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1% Warning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQZ-OB-uMf">
                                 <rect key="frame" x="84" y="362" width="99" height="21"/>
@@ -44,6 +50,9 @@
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z4X-UZ-ENR">
                                 <rect key="frame" x="241" y="357" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onePercentWarningSetting:" destination="BYZ-38-t0r" eventType="valueChanged" id="qyq-1J-2Zd"/>
+                                </connections>
                             </switch>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xql-cT-ySp" customClass="CustomContainerView" customModule="Save_Me_From_The_Light" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="467" width="375" height="200"/>
@@ -76,6 +85,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="fivePercentWarningSetting" destination="K6L-tv-4lZ" id="mZG-IY-Zyz"/>
+                        <outlet property="onePercentWarningSetting" destination="z4X-UZ-ENR" id="oca-8o-ygP"/>
+                        <outlet property="tenPercentWarningSetting" destination="8sa-wq-c6D" id="sIn-ch-SAf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,10 +109,10 @@
             </objects>
             <point key="canvasLocation" x="935" y="151"/>
         </scene>
-        <!--View Controller-->
+        <!--Voice Pack1 View Controller-->
         <scene sceneID="SBa-eB-U8R">
             <objects>
-                <viewController storyboardIdentifier="voicePack1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xp5-Zm-bfA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="voicePack1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xp5-Zm-bfA" customClass="VoicePack1ViewController" customModule="Save_Me_From_The_Light" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ql-fk-zNz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="1666" y="152"/>
         </scene>
-        <!--View Controller-->
+        <!--Voice Pack3 View Controller-->
         <scene sceneID="R8z-OA-MTe">
             <objects>
-                <viewController storyboardIdentifier="voicePack3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kKd-rp-sGL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="voicePack3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kKd-rp-sGL" customClass="VoicePack3ViewController" customModule="Save_Me_From_The_Light" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="289-1V-7p4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,10 +163,10 @@
             </objects>
             <point key="canvasLocation" x="2983" y="152"/>
         </scene>
-        <!--View Controller-->
+        <!--Voice Pack2 View Controller-->
         <scene sceneID="zlj-vV-hNI">
             <objects>
-                <viewController storyboardIdentifier="voicePack2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nh9-sf-NQg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="voicePack2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nh9-sf-NQg" customClass="VoicePack2ViewController" customModule="Save_Me_From_The_Light" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="emU-RO-0Ya">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
