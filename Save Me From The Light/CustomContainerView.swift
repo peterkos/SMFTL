@@ -17,13 +17,14 @@ class CustomContainerView: UIView {
 		
 		// Set background color
 		// TODO: manually changing background color doesn't work?
-		// 		 See https://stackoverflow.com/a/23593656
+		// See https://stackoverflow.com/a/23593656
 		
 		// Draw a snazzy angled background
 		self.backgroundColor = UIColor.white
 		
 		let shape = CAShapeLayer()
-		shape.fillColor = shapeFillColor.cgColor
+//		shape.fillColor = shapeFillColor.cgColor
+		shape.fillColor = UIColor.white.cgColor
 		shape.path = customPath().cgPath
 		self.layer.addSublayer(shape)
 		
@@ -33,13 +34,13 @@ class CustomContainerView: UIView {
 		
 		let path = UIBezierPath()
 		// The actual distance above the bottom of the screen, including "angle"
-		let bottomMargin =  CGFloat(frame.size.height * 0.20)
-		let marginGap = CGFloat(100)
+		let margin =  CGFloat(20)
+		let marginGap = CGFloat(60)
 		
-		path.move(to: CGPoint(x: 0, y: frame.size.height))
-		path.addLine(to: CGPoint(x: frame.size.width, y: frame.size.height))
-		path.addLine(to: CGPoint(x: frame.size.width, y: frame.size.height - bottomMargin - marginGap))
-		path.addLine(to: CGPoint(x: 0, y: frame.size.height - bottomMargin))
+		path.move(to: CGPoint(x: 0, y: margin + marginGap))
+		path.addLine(to: CGPoint(x: 0, y: 0))
+		path.addLine(to: CGPoint(x: frame.size.width, y: 0))
+		path.addLine(to: CGPoint(x: frame.size.width, y: margin))
 		path.close()
 		
 		return path

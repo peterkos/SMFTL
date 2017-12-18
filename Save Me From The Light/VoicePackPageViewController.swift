@@ -29,6 +29,10 @@ class VoicePackPageViewController: UIPageViewController, UIPageViewControllerDat
 		pages.append(voicePack3)
 		
 		setViewControllers([pages.first!], direction: .forward, animated: true, completion: nil)
+	
+		// Configure page control color
+//		let pageControl = UIPageControl.appearance()
+//		pageControl.backgroundColor = UIColor.red
 		
     }
 
@@ -49,14 +53,15 @@ class VoicePackPageViewController: UIPageViewController, UIPageViewControllerDat
 		return viewControllerAtWrappedIndex(nextIndex)
 	}
 	
-	func presentationCount(for pageViewController: UIPageViewController) -> Int {
-		return pages.count
-	}
+//	func presentationCount(for pageViewController: UIPageViewController) -> Int {
+//		return pages.count
+//	}
+//
+//	func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+//		return 0
+//	}
 	
-	func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-		return 0
-	}
-	
+
     /*
     // MARK: - Navigation
 
@@ -75,5 +80,5 @@ class VoicePackPageViewController: UIPageViewController, UIPageViewControllerDat
 			return nil
 		}
 	}
-
+	
 }

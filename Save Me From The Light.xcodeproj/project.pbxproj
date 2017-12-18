@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0E16178C1FD7934E00756645 /* CustomContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E16178B1FD7934E00756645 /* CustomContainerView.swift */; };
-		0E7B1A7F1FCF9B9500EC2D4D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7B1A7E1FCF9B9500EC2D4D /* Constants.swift */; };
 		0E953FDA1FC00C5000D6D6E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E953FD91FC00C5000D6D6E6 /* AppDelegate.swift */; };
 		0E953FDC1FC00C5000D6D6E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E953FDB1FC00C5000D6D6E6 /* ViewController.swift */; };
 		0E953FDF1FC00C5000D6D6E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E953FDD1FC00C5000D6D6E6 /* Main.storyboard */; };
@@ -20,7 +19,6 @@
 
 /* Begin PBXFileReference section */
 		0E16178B1FD7934E00756645 /* CustomContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContainerView.swift; sourceTree = "<group>"; };
-		0E7B1A7E1FCF9B9500EC2D4D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0E953FD61FC00C5000D6D6E6 /* Save Me From The Light.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Save Me From The Light.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E953FD91FC00C5000D6D6E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E953FDB1FC00C5000D6D6E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +67,6 @@
 				0E953FDD1FC00C5000D6D6E6 /* Main.storyboard */,
 				0E16178B1FD7934E00756645 /* CustomContainerView.swift */,
 				0E980E091FCE13E800F5ABED /* VoicePackPageViewController.swift */,
-				0E7B1A7E1FCF9B9500EC2D4D /* Constants.swift */,
 				0E953FE01FC00C5000D6D6E6 /* Assets.xcassets */,
 				0E953FE21FC00C5000D6D6E6 /* LaunchScreen.storyboard */,
 				0E953FE51FC00C5000D6D6E6 /* Info.plist */,
@@ -181,7 +178,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E16178C1FD7934E00756645 /* CustomContainerView.swift in Sources */,
-				0E7B1A7F1FCF9B9500EC2D4D /* Constants.swift in Sources */,
 				0E953FDC1FC00C5000D6D6E6 /* ViewController.swift in Sources */,
 				0E953FDA1FC00C5000D6D6E6 /* AppDelegate.swift in Sources */,
 				0E980E0A1FCE13E800F5ABED /* VoicePackPageViewController.swift in Sources */,
