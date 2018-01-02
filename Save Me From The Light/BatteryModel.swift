@@ -23,9 +23,18 @@ class BatteryModel {
 	
 	@objc func batteryLevelDidChange(_ notification: Notification) {
 		// Level change
-		// Play sound when < 10%, 5%, etc.
+		// Play sound when <= 10%, 5%, etc.
+		
+		// User preferences
+		let tenPercentWarning = UserDefaults.standard.bool(forKey: "tenPercentWarning")
+		let fivePercentWarning = UserDefaults.standard.bool(forKey: "fivePercentWarning")
+		let onePercentWarning = UserDefaults.standard.bool(forKey: "onePercentWarning")
+		
+		if (tenPercentWarning && batteryLevel == 10.0) {
+			
+		}
 	}
-	
+
 	// Useful print state function
 	func printState(_ state: Int) -> String {
 		switch UIDevice.current.batteryState {
@@ -45,8 +54,8 @@ class BatteryModel {
 		NotificationCenter.default.addObserver(self, selector: #selector(batteryLevelDidChange),
 											   name: .UIDeviceBatteryLevelDidChange, object: nil)
 		
-		print("State: \(printState(UIDevice.current.batteryState.rawValue))")
-		print("Level: \(UIDevice.current.batteryLevel)")
+		print("State on load: \(printState(UIDevice.current.batteryState.rawValue))")
+		print("Level on load: \(UIDevice.current.batteryLevel)")
 	}
 	
 	
