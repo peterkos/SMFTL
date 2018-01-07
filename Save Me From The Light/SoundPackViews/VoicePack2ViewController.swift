@@ -11,10 +11,10 @@ import SwiftySound
 
 class VoicePack2ViewController: UIViewController {
 
+	let firstPack = PackOne()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		Sound.play(file: "packTwoDemo.wav")
 		
 		// Setup preference for voice pack to play
 		UserDefaults.standard.set(2, forKey: "voicePackToUse")
@@ -25,7 +25,8 @@ class VoicePack2ViewController: UIViewController {
 		super.viewDidAppear(animated)
 		
 		// Initialize soundpack manager
-		let firstPack = PackOne()
+		
+		
 		firstPack.playWarningSound()
 	}
 	

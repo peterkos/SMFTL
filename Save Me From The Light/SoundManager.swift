@@ -15,27 +15,50 @@ struct PackOne {
 	var reliefSounds = [String: Sound]()
 	
 	init() {
-		warningSounds["tenPercentWarning"] = Sound(url: URL(fileURLWithPath: Bundle.main.path(forResource: "CongratsChris", ofType: "wav")!))
-		print(URL(fileURLWithPath: Bundle.main.path(forResource: "CongratsChris", ofType: "wav")!))
-		warningSounds.first!.value.prepare()
+
+		// Load all warning sounds
+		let warningSoundURLS = Bundle.main.urls(forResourcesWithExtension: "mp3", subdirectory: "Sounds/PackOne/Warnings", localization: nil)!
+		
+		guard warningSoundURLS.count >= 3 else {
+			let message = "Unable to load all warning sound files. Only \(warningSoundURLS.count)/3 found."
+			print(message)
+			fatalError(message)
+		}
+		
+		warningSounds["tenPercent"]  = Sound(url: warningSoundURLS[0])
+		warningSounds["fivePercent"] = Sound(url: warningSoundURLS[1])
+		warningSounds["onePercent"]  = Sound(url: warningSoundURLS[2])
+		
+		
+		// Load all relief sounds
+		let reliefSoundURLS = Bundle.main.urls(forResourcesWithExtension: "mp3", subdirectory: "Sounds/PackOne/Relief", localization: nil)!
+		
+		guard reliefSoundURLS.count >= 3 else {
+			let message = "Unable to load all warning sound files. Only \(reliefSoundURLS.count)/3 found."
+			print(message)
+			fatalError(message)
+		}
+		
+		reliefSounds["tenPercent"]  = Sound(url: reliefSoundURLS[0])
+		reliefSounds["fivePercent"] = Sound(url: reliefSoundURLS[1])
+		reliefSounds["onePercent"]  = Sound(url: reliefSoundURLS[2])
+		
 	}
 	
+	// Selects a random warning sound to play
 	func playWarningSound() {
-//
-//		// Play the first warning sound
-//		warningSounds.first!.value.volume = 1.0
-//		warningSounds.first!.value.play(numberOfLoops: 2) { (result) in
-//			print(result)
-//		}
+		let randomIndex = Int(arc4random_uniform(UInt32(warningSounds.count)))
+		let randomKey = Array(warningSounds.keys)[randomIndex]
 		
-//		Sound(url: URL(fileURLWithPath: Bundle.main.path(forResource: "CongratsChris", ofType: "wav")!)
-		let soundURL = URL(fileURLWithPath: Bundle.main.path(forResource: "CongratsChris", ofType: "wav")!)
-		Sound(url: soundURL)!.play()
+		warningSounds[randomKey]!.play()
+	}
+	
+	// Selects a random relief sound to play
+	func playReliefSound() {
+		let randomIndex = Int(arc4random_uniform(UInt32(reliefSounds.count)))
+		let randomKey = Array(reliefSounds.keys)[randomIndex]
 		
-		// Can't get proper sound file URL
-		// Works properly just using Sound().play however....
-		
-		print("asdf")
+		reliefSounds[randomKey]!.play()
 	}
 	
 }

@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		0E16178C1FD7934E00756645 /* CustomContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E16178B1FD7934E00756645 /* CustomContainerView.swift */; };
 		0E5C8B7D1FEC560700A8C91D /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5C8B7C1FEC560700A8C91D /* SoundManager.swift */; };
-		0E5C8B7F1FEC5AAD00A8C91D /* chordprog.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E5C8B7E1FEC5AAD00A8C91D /* chordprog.wav */; };
-		0E5C8B831FEC5F4B00A8C91D /* CongratsChris.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E5C8B811FEC5E0800A8C91D /* CongratsChris.wav */; };
 		0E953FDA1FC00C5000D6D6E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E953FD91FC00C5000D6D6E6 /* AppDelegate.swift */; };
 		0E953FDC1FC00C5000D6D6E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E953FDB1FC00C5000D6D6E6 /* ViewController.swift */; };
 		0E953FDF1FC00C5000D6D6E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E953FDD1FC00C5000D6D6E6 /* Main.storyboard */; };
@@ -18,6 +16,7 @@
 		0E953FE41FC00C5000D6D6E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E953FE21FC00C5000D6D6E6 /* LaunchScreen.storyboard */; };
 		0E980E0A1FCE13E800F5ABED /* VoicePackPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E980E091FCE13E800F5ABED /* VoicePackPageViewController.swift */; };
 		0EA5A49E1FCB68E000C527B2 /* SwiftySound.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA5A49D1FCB68E000C527B2 /* SwiftySound.framework */; };
+		0ED62ACC2002CF48006A41E1 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 0ED62ACB2002CF47006A41E1 /* Sounds */; };
 		0EF455BD1FE7A6BB00078FF6 /* VoicePack1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF455BC1FE7A6BB00078FF6 /* VoicePack1ViewController.swift */; };
 		0EF455BF1FE7A6C400078FF6 /* VoicePack2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF455BE1FE7A6C400078FF6 /* VoicePack2ViewController.swift */; };
 		0EF455C11FE7A6CC00078FF6 /* VoicePack3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF455C01FE7A6CC00078FF6 /* VoicePack3ViewController.swift */; };
@@ -27,8 +26,6 @@
 /* Begin PBXFileReference section */
 		0E16178B1FD7934E00756645 /* CustomContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContainerView.swift; sourceTree = "<group>"; };
 		0E5C8B7C1FEC560700A8C91D /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
-		0E5C8B7E1FEC5AAD00A8C91D /* chordprog.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chordprog.wav; sourceTree = "<group>"; };
-		0E5C8B811FEC5E0800A8C91D /* CongratsChris.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CongratsChris.wav; sourceTree = "<group>"; };
 		0E953FD61FC00C5000D6D6E6 /* Save Me From The Light.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Save Me From The Light.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E953FD91FC00C5000D6D6E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E953FDB1FC00C5000D6D6E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +35,7 @@
 		0E953FE51FC00C5000D6D6E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E980E091FCE13E800F5ABED /* VoicePackPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePackPageViewController.swift; sourceTree = "<group>"; };
 		0EA5A49D1FCB68E000C527B2 /* SwiftySound.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftySound.framework; path = Carthage/Build/iOS/SwiftySound.framework; sourceTree = "<group>"; };
+		0ED62ACB2002CF47006A41E1 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		0EF455BC1FE7A6BB00078FF6 /* VoicePack1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePack1ViewController.swift; sourceTree = "<group>"; };
 		0EF455BE1FE7A6C400078FF6 /* VoicePack2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePack2ViewController.swift; sourceTree = "<group>"; };
 		0EF455C01FE7A6CC00078FF6 /* VoicePack3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePack3ViewController.swift; sourceTree = "<group>"; };
@@ -85,13 +83,12 @@
 			children = (
 				0EF455BB1FE7A69400078FF6 /* SoundPackViews */,
 				0E953FD91FC00C5000D6D6E6 /* AppDelegate.swift */,
+				0ED62ACB2002CF47006A41E1 /* Sounds */,
 				0E953FDB1FC00C5000D6D6E6 /* ViewController.swift */,
 				0E953FDD1FC00C5000D6D6E6 /* Main.storyboard */,
 				0E16178B1FD7934E00756645 /* CustomContainerView.swift */,
 				0E980E091FCE13E800F5ABED /* VoicePackPageViewController.swift */,
 				0E953FE01FC00C5000D6D6E6 /* Assets.xcassets */,
-				0E5C8B7E1FEC5AAD00A8C91D /* chordprog.wav */,
-				0E5C8B811FEC5E0800A8C91D /* CongratsChris.wav */,
 				0E5C8B801FEC5AB200A8C91D /* Samples */,
 				0E953FE21FC00C5000D6D6E6 /* LaunchScreen.storyboard */,
 				0E953FE51FC00C5000D6D6E6 /* Info.plist */,
@@ -184,10 +181,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E5C8B831FEC5F4B00A8C91D /* CongratsChris.wav in Resources */,
 				0E953FE41FC00C5000D6D6E6 /* LaunchScreen.storyboard in Resources */,
-				0E5C8B7F1FEC5AAD00A8C91D /* chordprog.wav in Resources */,
 				0E953FE11FC00C5000D6D6E6 /* Assets.xcassets in Resources */,
+				0ED62ACC2002CF48006A41E1 /* Sounds in Resources */,
 				0E953FDF1FC00C5000D6D6E6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
