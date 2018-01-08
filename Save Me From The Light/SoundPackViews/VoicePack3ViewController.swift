@@ -10,16 +10,30 @@ import UIKit
 import SwiftySound
 
 class VoicePack3ViewController: UIViewController {
-
+	
+	let packThree: SoundPack = SoundPack("PackThree", numberOfSounds: 3)
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		Sound.play(file: "packThreeDemo.wav")
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
 		
 		// Setup preference for voice pack to play
 		UserDefaults.standard.set(3, forKey: "voicePackToUse")
 		
+		// Play a random sound to preview
+		packThree.playSound()
+		
 	}
 	
+	// When user slides out of view, stop playing the current preview
+	override func viewWillDisappear(_ animated: Bool) {
+		if let sound = packThree.currentSound {
+			sound.stop()
+		}
+	}
 	
 }
+
