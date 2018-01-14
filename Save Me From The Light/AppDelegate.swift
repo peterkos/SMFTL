@@ -17,10 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		
 		// Setup preference for voice pack to play
-		// By default, uses the first. (Note: index does NOT start at 0.)
-		UserDefaults.standard.set(1, forKey: "voicePackToUse")
-		
-		
+		// By default, uses the first.
+		UserDefaults.standard.set("8BitPack", forKey: "soundPack")
 		
 		
 		return true

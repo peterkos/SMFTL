@@ -22,15 +22,22 @@ class BatteryModel {
 	}
 	
 	@objc func batteryLevelDidChange(_ notification: Notification) {
+		
 		// Level change
-		// Play sound when <= 10%, 5%, etc.
+		// Play sound when == 10%, 5%, etc.
+		let pack = UserDefaults.standard.string(forKey: "soundPack")
+//		let sounds = SoundPack.init(<#T##pack: String##String#>, numberOfSounds: <#T##Int#>)
 		
 		// User preferences
 		let tenPercentWarning = UserDefaults.standard.bool(forKey: "tenPercentWarning")
 		let fivePercentWarning = UserDefaults.standard.bool(forKey: "fivePercentWarning")
 		let onePercentWarning = UserDefaults.standard.bool(forKey: "onePercentWarning")
 		
-		if (tenPercentWarning && batteryLevel == 10.0) {
+		if (batteryLevel == 10.0 && tenPercentWarning) {
+			
+		} else if (batteryLevel == 5.0 && fivePercentWarning) {
+			
+		} else if (batteryLevel == 1.0 && onePercentWarning) {
 			
 		}
 	}

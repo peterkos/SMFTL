@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="54" y="151"/>
         </scene>
-        <!--Voice Pack Page View Controller-->
+        <!--Sound Pack Page View Controller-->
         <scene sceneID="Xsi-Z0-F3x">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="znb-8r-04L" customClass="VoicePackPageViewController" customModule="Save_Me_From_The_Light" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="znb-8r-04L" customClass="SoundPackPageViewController" customModule="Save_Me_From_The_Light" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="Xp5-Zm-bfA" kind="show" id="Qga-bW-2Xy"/>
                         <segue destination="kKd-rp-sGL" kind="show" id="Udb-a7-YUK"/>
@@ -109,16 +109,16 @@
             </objects>
             <point key="canvasLocation" x="935" y="151"/>
         </scene>
-        <!--Voice Pack1 View Controller-->
+        <!--Sound Pack8 Bit View Controller-->
         <scene sceneID="SBa-eB-U8R">
             <objects>
-                <viewController storyboardIdentifier="voicePack1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xp5-Zm-bfA" customClass="VoicePack1ViewController" customModule="Save_Me_From_The_Light" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="8Bit" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xp5-Zm-bfA" customClass="SoundPack8BitViewController" customModule="Save_Me_From_The_Light" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ql-fk-zNz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pack 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGR-OA-Z9U">
-                                <rect key="frame" x="163" y="90" width="49" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8Bit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGR-OA-Z9U">
+                                <rect key="frame" x="172" y="90" width="31" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -136,16 +136,16 @@
             </objects>
             <point key="canvasLocation" x="1666" y="152"/>
         </scene>
-        <!--Voice Pack3 View Controller-->
+        <!--Sound Pack Something Else View Controller-->
         <scene sceneID="R8z-OA-MTe">
             <objects>
-                <viewController storyboardIdentifier="voicePack3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kKd-rp-sGL" customClass="VoicePack3ViewController" customModule="Save_Me_From_The_Light" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SomethingElse" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kKd-rp-sGL" customClass="SoundPackSomethingElseViewController" customModule="Save_Me_From_The_Light" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="289-1V-7p4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pack 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yq-Jd-kCz">
-                                <rect key="frame" x="161" y="90" width="52" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SomethingElse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yq-Jd-kCz">
+                                <rect key="frame" x="130" y="90" width="115" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -163,16 +163,16 @@
             </objects>
             <point key="canvasLocation" x="2983" y="152"/>
         </scene>
-        <!--Voice Pack2 View Controller-->
+        <!--Sound Pack Another Something View Controller-->
         <scene sceneID="zlj-vV-hNI">
             <objects>
-                <viewController storyboardIdentifier="voicePack2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nh9-sf-NQg" customClass="VoicePack2ViewController" customModule="Save_Me_From_The_Light" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnotherSomething" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nh9-sf-NQg" customClass="SoundPackAnotherSomethingViewController" customModule="Save_Me_From_The_Light" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="emU-RO-0Ya">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pack 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQS-eO-HxX">
-                                <rect key="frame" x="161" y="90" width="52" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AnotherSomething" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQS-eO-HxX">
+                                <rect key="frame" x="115.5" y="90" width="144" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VoicePackPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+class SoundPackPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 	
 	var pages = [UIViewController]()
 	
@@ -19,14 +19,10 @@ class VoicePackPageViewController: UIPageViewController, UIPageViewControllerDat
 		self.dataSource = self
 		
 		// Label for each voice pack
-		// TODO: Make functional sound previws!
-		let voicePack1 = storyboard!.instantiateViewController(withIdentifier: "voicePack1")
-		let voicePack2 = storyboard!.instantiateViewController(withIdentifier: "voicePack2")
-		let voicePack3 = storyboard!.instantiateViewController(withIdentifier: "voicePack3")
-		
-		pages.append(voicePack1)
-		pages.append(voicePack2)
-		pages.append(voicePack3)
+		// TODO: Make functional sound previews!
+		pages.append(storyboard!.instantiateViewController(withIdentifier: "8Bit"))
+		pages.append(storyboard!.instantiateViewController(withIdentifier: "AnotherSomething"))
+		pages.append(storyboard!.instantiateViewController(withIdentifier: "SomethingElse"))
 		
 		setViewControllers([pages.first!], direction: .forward, animated: true, completion: nil)
 	

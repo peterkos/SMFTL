@@ -1,5 +1,5 @@
 //
-//  VoicePack3ViewController.swift
+//  VoicePack2ViewController.swift
 //  Save Me From The Light
 //
 //  Created by Peter Kos on 12/18/17.
@@ -9,9 +9,9 @@
 import UIKit
 import SwiftySound
 
-class VoicePack3ViewController: UIViewController {
+class SoundPackAnotherSomethingViewController: UIViewController {
 	
-	let packThree: SoundPack = SoundPack("PackThree", numberOfSounds: 3)
+	let packTwo: SoundPack = SoundPack("AnotherSomething", numberOfSounds: 3)
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -21,19 +21,18 @@ class VoicePack3ViewController: UIViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		
 		// Setup preference for voice pack to play
-		UserDefaults.standard.set(3, forKey: "voicePackToUse")
+		UserDefaults.standard.set("AnotherSomething", forKey: "soundPack")
 		
 		// Play a random sound to preview
-		packThree.playSound()
+		packTwo.playSound()
 		
 	}
 	
 	// When user slides out of view, stop playing the current preview
 	override func viewWillDisappear(_ animated: Bool) {
-		if let sound = packThree.currentSound {
+		if let sound = packTwo.currentSound {
 			sound.stop()
 		}
 	}
 	
 }
-
