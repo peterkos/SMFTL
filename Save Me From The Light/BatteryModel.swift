@@ -11,35 +11,40 @@ import UIKit
 
 class BatteryModel {
 	
+	fileprivate var sounds: SoundPack
 	
 	var batteryLevel: Float {
 		return UIDevice.current.batteryLevel
 	}
 	
 	@objc func batteryStateDidChange(_ notification: Notification) {
-		// State change
-		// Reset message when plugged in
+		
+		if (UIDevice.current.batteryState == .charging) {
+			sounds.playReliefSound()
+		}
+		
 	}
 	
 	@objc func batteryLevelDidChange(_ notification: Notification) {
 		
-		// Level change
 		// Play sound when == 10%, 5%, etc.
-		let pack = UserDefaults.standard.string(forKey: "soundPack")
-//		let sounds = SoundPack.init(<#T##pack: String##String#>, numberOfSounds: <#T##Int#>)
-		
+		// TODO: Add specific warning sounds?
+
 		// User preferences
 		let tenPercentWarning = UserDefaults.standard.bool(forKey: "tenPercentWarning")
 		let fivePercentWarning = UserDefaults.standard.bool(forKey: "fivePercentWarning")
 		let onePercentWarning = UserDefaults.standard.bool(forKey: "onePercentWarning")
 		
+		// Warning Sounds
 		if (batteryLevel == 10.0 && tenPercentWarning) {
-			
+			sounds.playWarningSound()
 		} else if (batteryLevel == 5.0 && fivePercentWarning) {
-			
+			sounds.playWarningSound()
 		} else if (batteryLevel == 1.0 && onePercentWarning) {
-			
+			sounds.playWarningSound()
 		}
+		
+		
 	}
 
 	// Useful print state function
@@ -53,8 +58,14 @@ class BatteryModel {
 	}
 	
 	init() {
-		UIDevice.current.isBatteryMonitoringEnabled = true
 		
+		
+		// Load in sounds
+		let pack = UserDefaults.standard.string(forKey: "soundPack")!
+		sounds = SoundPack.init(pack, numberOfSounds: 3)
+		
+		UIDevice.current.isBatteryMonitoringEnabled = true
+
 		// Observers for level & state change
 		NotificationCenter.default.addObserver(self, selector: #selector(batteryStateDidChange),
 											   name: .UIDeviceBatteryStateDidChange, object: nil)
@@ -63,6 +74,7 @@ class BatteryModel {
 		
 		print("State on load: \(printState(UIDevice.current.batteryState.rawValue))")
 		print("Level on load: \(UIDevice.current.batteryLevel)")
+		
 	}
 	
 	

@@ -6,7 +6,8 @@
 //  Copyright © 2017 UW. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import UserNotifications
 import SwiftySound
 
 
@@ -48,6 +49,15 @@ class SoundPack {
 		reliefSounds["tenPercent"]  = Sound(url: reliefSoundURLS[0])
 		reliefSounds["fivePercent"] = Sound(url: reliefSoundURLS[1])
 		reliefSounds["onePercent"]  = Sound(url: reliefSoundURLS[2])
+		
+		
+		// Implement notification
+		// Redo all the sound loading code >:(
+		let notifContent = UNMutableNotificationContent()
+//		notif.title = "battery!"
+//		notif.body = "Lawl dis is battery"
+		
+		let notif = UNNotificationRequest(identifier: "SoundPlay", content: notifContent, trigger: nil)
 	}
 	
 	
