@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,8 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		// Setup preference for voice pack to play
 		// By default, uses the first.
-		UserDefaults.standard.set("8BitPack", forKey: "soundPack")
+		UserDefaults.standard.set("8Bit", forKey: "soundPack")
 		
+		UNUserNotificationCenter.current().requestAuthorization(options: [.sound, .alert]) { (granted, error) in
+			print("eeyyy")
+		}
+		
+		let batteryMod = BatteryModel()
 		
 		return true
 	}

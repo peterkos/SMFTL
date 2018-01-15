@@ -163,16 +163,16 @@
             </objects>
             <point key="canvasLocation" x="2983" y="152"/>
         </scene>
-        <!--Sound Pack Another Something View Controller-->
+        <!--Sound Pack Grandalf View Controller-->
         <scene sceneID="zlj-vV-hNI">
             <objects>
-                <viewController storyboardIdentifier="AnotherSomething" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nh9-sf-NQg" customClass="SoundPackAnotherSomethingViewController" customModule="Save_Me_From_The_Light" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnotherSomething" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nh9-sf-NQg" customClass="SoundPackGrandalfViewController" customModule="Save_Me_From_The_Light" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="emU-RO-0Ya">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AnotherSomething" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQS-eO-HxX">
-                                <rect key="frame" x="115.5" y="90" width="144" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grandalf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQS-eO-HxX">
+                                <rect key="frame" x="154.5" y="90" width="66" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

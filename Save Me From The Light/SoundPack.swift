@@ -15,67 +15,54 @@ import SwiftySound
 
 class SoundPack {
 	
-	var warningSounds = [String: Sound]()
-	var reliefSounds = [String: Sound]()
-	var currentSound: Sound?
+	var warningSounds = [Sound]()
+	var reliefSounds = [Sound]()
 	var soundCount: Int
+	var currentSound: Sound?
+	var pack: String
 
 	// Precondition: Warning/Relief sound files are equal in number!
 	init(_ pack: String, numberOfSounds soundCount: Int)  {
 		
 		self.soundCount = soundCount
+		self.pack = pack
 		
 		// Load all warning sounds
-		let warningSoundURLS = Bundle.main.urls(forResourcesWithExtension: "mp3", subdirectory: "Sounds/" + pack + "/Warnings", localization: nil)!
-		let reliefSoundURLS  = Bundle.main.urls(forResourcesWithExtension: "mp3", subdirectory: "Sounds/" + pack + "/Relief", localization: nil)!
+		let warningSoundURLS = Bundle.main.urls(forResourcesWithExtension: "wav", subdirectory: "Sounds/" + pack + "/Warnings", localization: nil)!
+		let reliefSoundURLS  = Bundle.main.urls(forResourcesWithExtension: "wav", subdirectory: "Sounds/" + pack + "/Relief", localization: nil)!
 		
 		guard warningSoundURLS.count >= soundCount else {
-			let message = "Unable to load all warning sound files for pack \(pack). Only \(warningSoundURLS.count)/3 found."
+			let message = "Unable to load all warning sound files for pack \(pack). Only \(warningSoundURLS.count)/\(soundCount) found."
 			print(message)
 			fatalError(message)
 		}
 		
 		guard reliefSoundURLS.count >= soundCount else {
-			let message = "Unable to load all relief sound files for pack \(pack). Only \(reliefSoundURLS.count)/3 found."
+			let message = "Unable to load all relief sound files for pack \(pack). Only \(reliefSoundURLS.count)/\(soundCount) found."
 			print(message)
 			fatalError(message)
 		}
 		
 		// Instantiate sounds
-		warningSounds["tenPercent"]  = Sound(url: warningSoundURLS[0])
-		warningSounds["fivePercent"] = Sound(url: warningSoundURLS[1])
-		warningSounds["onePercent"]  = Sound(url: warningSoundURLS[2])
+		for i in 0..<soundCount {
+			warningSounds.append(Sound(url: warningSoundURLS[i])!)
+			reliefSounds.append(Sound(url: reliefSoundURLS[i])!)
+		}
 		
-		reliefSounds["tenPercent"]  = Sound(url: reliefSoundURLS[0])
-		reliefSounds["fivePercent"] = Sound(url: reliefSoundURLS[1])
-		reliefSounds["onePercent"]  = Sound(url: reliefSoundURLS[2])
-		
-		
-		// Implement notification
-		// Redo all the sound loading code >:(
-		let notifContent = UNMutableNotificationContent()
-//		notif.title = "battery!"
-//		notif.body = "Lawl dis is battery"
-		
-		let notif = UNNotificationRequest(identifier: "SoundPlay", content: notifContent, trigger: nil)
 	}
 	
 	
 	// Selects a random warning sound to play
 	func playWarningSound() {
 		let randomIndex = Int(arc4random_uniform(UInt32(soundCount)))
-		let randomKey = Array(warningSounds.keys)[randomIndex]
-		
-		currentSound = warningSounds[randomKey]!
+		currentSound = warningSounds[randomIndex]
 		currentSound!.play()
 	}
 	
 	// Selects a random relief sound to play
 	func playReliefSound() {
 		let randomIndex = Int(arc4random_uniform(UInt32(soundCount)))
-		let randomKey = Array(reliefSounds.keys)[randomIndex]
-		
-		currentSound = reliefSounds[randomKey]!
+		currentSound = reliefSounds[randomIndex]
 		currentSound!.play()
 	}
 	
@@ -88,7 +75,5 @@ class SoundPack {
 		} else {
 			playWarningSound()
 		}
-		
-		print(randomIndex)
 	}
 }

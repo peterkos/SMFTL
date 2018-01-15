@@ -9,19 +9,18 @@
 import UIKit
 import SwiftySound
 
-class SoundPackAnotherSomethingViewController: UIViewController {
+class SoundPackGrandalfViewController: UIViewController {
 	
-	let packTwo: SoundPack = SoundPack("AnotherSomething", numberOfSounds: 3)
+	let packTwo: SoundPack = SoundPack("Grandalf", numberOfSounds: 6)
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
 		
 		// Setup preference for voice pack to play
-		UserDefaults.standard.set("AnotherSomething", forKey: "soundPack")
+		UserDefaults.standard.set("Grandalf", forKey: "soundPack")
 		
 		// Play a random sound to preview
 		packTwo.playSound()
