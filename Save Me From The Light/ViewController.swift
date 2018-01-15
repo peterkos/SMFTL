@@ -11,7 +11,7 @@ import UserNotifications
 import SwiftySound
 
 
-class ViewController: UIViewController, UNUserNotificationCenterDelegate {
+class ViewController: UIViewController {
 	
 	let soundPack = SoundPack("Grandalf", numberOfSounds: 6)
 	
@@ -38,6 +38,17 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
 		userDeafults.set(sender.isOn, forKey: "onePercentWarning")
 	}
 	
+	@IBAction func testWarningNotification(_ sender: Any) {
+		let notificationManager = NotificationManager(withSoundPack: soundPack)
+		notificationManager.warningNotification()
+	}
+	
+	@IBAction func testReliefNotification(_ sender: Any) {
+		let notificationManager = NotificationManager(withSoundPack: soundPack)
+		notificationManager.reliefNotification()
+	}
+	
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		userDeafults.synchronize()
@@ -46,43 +57,12 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
 		tenPercentWarningSetting.isOn  = userDeafults.bool(forKey: "tenPercentWarning")
 		fivePercentWarningSetting.isOn = userDeafults.bool(forKey: "fivePercentWarning")
 		onePercentWarningSetting.isOn  = userDeafults.bool(forKey: "onePercentWarning")
-		
-		scheduleIt()
+	
 	}
 	
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
 		userDeafults.synchronize()
-	}
-	
-	func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-		print("Handling...")
-		completionHandler(.sound)
-	}
-	
-	func scheduleIt() {
-		
-		// Implement notification
-		let notifContent = UNMutableNotificationContent()
-		notifContent.title = "battery!"
-		notifContent.body = "Lawl dis is battery"
-		
-		// Grab a random warning sound to play
-		let randomIndex = Int(arc4random_uniform(UInt32(soundPack.soundCount)))
-		notifContent.sound = UNNotificationSound(named: soundPack.pack + "Warning" + String(randomIndex))
-		
-		let notifTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
-		let notif = UNNotificationRequest(identifier: "WarningNotification", content: notifContent, trigger: notifTrigger)
-		
-		UNUserNotificationCenter.current().add(notif) { (error) in
-			guard error != nil else {
-				print(error.debugDescription)
-				return
-			}
-			
-			print("Deploying notification!")
-		}
-		
 	}
 	
 

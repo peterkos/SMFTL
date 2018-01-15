@@ -60,6 +60,23 @@
                                     <segue destination="znb-8r-04L" kind="embed" id="khE-nm-ZBc"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTZ-IW-xMZ">
+                                <rect key="frame" x="101" y="108" width="173" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Test Warning Notification"/>
+                                <connections>
+                                    <action selector="testWarningNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G06-pB-nY7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kz-Hz-erU">
+                                <rect key="frame" x="111" y="146" width="154" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Test Relief Notification"/>
+                                <connections>
+                                    <action selector="testReliefNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Sk-rt-Ico"/>
+                                    <action selector="testWarningNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJ3-ou-mwj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

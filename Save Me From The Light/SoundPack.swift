@@ -15,8 +15,8 @@ import SwiftySound
 
 class SoundPack {
 	
-	var warningSounds = [Sound]()
-	var reliefSounds = [Sound]()
+	private var warningSounds = [Sound]()
+	private var reliefSounds = [Sound]()
 	var soundCount: Int
 	var currentSound: Sound?
 	var pack: String
@@ -27,10 +27,11 @@ class SoundPack {
 		self.soundCount = soundCount
 		self.pack = pack
 		
-		// Load all warning sounds
+		// Load all warning sounds in pack
 		let warningSoundURLS = Bundle.main.urls(forResourcesWithExtension: "wav", subdirectory: "Sounds/" + pack + "/Warnings", localization: nil)!
 		let reliefSoundURLS  = Bundle.main.urls(forResourcesWithExtension: "wav", subdirectory: "Sounds/" + pack + "/Relief", localization: nil)!
 		
+		// Make sure everything was loaded correctly
 		guard warningSoundURLS.count >= soundCount else {
 			let message = "Unable to load all warning sound files for pack \(pack). Only \(warningSoundURLS.count)/\(soundCount) found."
 			print(message)
@@ -43,7 +44,6 @@ class SoundPack {
 			fatalError(message)
 		}
 		
-		// Instantiate sounds
 		for i in 0..<soundCount {
 			warningSounds.append(Sound(url: warningSoundURLS[i])!)
 			reliefSounds.append(Sound(url: reliefSoundURLS[i])!)
@@ -69,11 +69,16 @@ class SoundPack {
 	// Selects either random or warning sound (random)
 	func playSound() {
 		let randomIndex = Int(arc4random_uniform(UInt32(100)))
-		
-		if randomIndex % 2 == 0 {
-			playReliefSound()
-		} else {
-			playWarningSound()
-		}
+		randomIndex % 2 == 0 ? playReliefSound() : playWarningSound()
+	}
+	
+	func randomWarningPath() -> String {
+		let randomIndex = Int(arc4random_uniform(UInt32(soundCount))) + 1
+		return "Sounds/" + pack + "/Warnings/" + pack + "Warning" + String(randomIndex) + ".wav"
+	}
+	
+	func randomReliefPath() -> String {
+		let randomIndex = Int(arc4random_uniform(UInt32(soundCount))) + 1
+		return "Sounds/" + pack + "/Relief/" + pack + "Relief" + String(randomIndex) + ".wav"
 	}
 }
