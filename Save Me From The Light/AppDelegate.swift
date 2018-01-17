@@ -13,18 +13,17 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-	let notificationDelegate = NotificationManager()
+	var notificationManager: NotificationManager?
+	var notificationDelegate: UNUserNotificationCenterDelegate?
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		
-		// Setup preference for voice pack to play
-		// By default, uses the first.
-		UserDefaults.standard.set("8Bit", forKey: "soundPack")
-		
+		// Load in the first sound pack
+		let soundPack = SoundPack("8Bit")
 		
 		// Configure notifications
-		let current = UNUserNotificationCenter.current()
-		current.delegate = notificationDelegate
+		notificationManager = NotificationManager(withSoundPack: soundPack)!
+		UNUserNotificationCenter.current().delegate = notificationManager
 		
 		UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (granted, error) in
 			print("dis is de wey")

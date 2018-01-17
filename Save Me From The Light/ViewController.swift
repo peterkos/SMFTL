@@ -13,8 +13,6 @@ import SwiftySound
 
 class ViewController: UIViewController {
 	
-	let soundPack = SoundPack("Grandalf", numberOfSounds: 6)
-	
 	// Literally saving two words here
 	private let userDeafults = UserDefaults.standard
 	
@@ -39,13 +37,11 @@ class ViewController: UIViewController {
 	}
 	
 	@IBAction func testWarningNotification(_ sender: Any) {
-		let notificationManager = NotificationManager(withSoundPack: soundPack)
-		notificationManager.warningNotification()
+		NotificationManager.showWarning()
 	}
 	
 	@IBAction func testReliefNotification(_ sender: Any) {
-		let notificationManager = NotificationManager(withSoundPack: soundPack)
-		notificationManager.reliefNotification()
+		NotificationManager.showRelief()
 	}
 	
 	

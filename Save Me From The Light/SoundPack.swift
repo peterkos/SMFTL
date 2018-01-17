@@ -18,32 +18,49 @@ class SoundPack {
 	private var warningSounds = [Sound]()
 	private var reliefSounds = [Sound]()
 	var soundCount: Int
-	var currentSound: Sound?
-	var pack: String
+	var pack: String {
+		// When setting a new pack, the preference is saved.
+		willSet {
+			UserDefaults.standard.set(pack, forKey: "soundPack")
+		}
+	}
+	static var currentSound: Sound?
+	
 
 	// Precondition: Warning/Relief sound files are equal in number!
-	init(_ pack: String, numberOfSounds soundCount: Int)  {
+	// Precondition: One or more sounds are available to load!
+	// TODO: Error check loading sound names -- i.e., possibly 2/5 were named incorrectly?
+	init(_ pack: String)  {
 		
-		self.soundCount = soundCount
 		self.pack = pack
 		
 		// Load all warning sounds in pack
 		let warningSoundURLS = Bundle.main.urls(forResourcesWithExtension: "wav", subdirectory: "Sounds/" + pack + "/Warnings", localization: nil)!
 		let reliefSoundURLS  = Bundle.main.urls(forResourcesWithExtension: "wav", subdirectory: "Sounds/" + pack + "/Relief", localization: nil)!
 		
-		// Make sure everything was loaded correctly
-		guard warningSoundURLS.count >= soundCount else {
-			let message = "Unable to load all warning sound files for pack \(pack). Only \(warningSoundURLS.count)/\(soundCount) found."
+		// Check to see if sounds were loaded properly
+		guard warningSoundURLS.count == reliefSoundURLS.count else {
+			let message = "Unequal count of Warning sounds (\(warningSoundURLS.count)) and Relief sounds (\(reliefSoundURLS.count))!"
 			print(message)
 			fatalError(message)
 		}
 		
-		guard reliefSoundURLS.count >= soundCount else {
-			let message = "Unable to load all relief sound files for pack \(pack). Only \(reliefSoundURLS.count)/\(soundCount) found."
+		guard warningSoundURLS.count >= 0 else {
+			let message = "Unable to load warning sound files for pack \(pack)."
 			print(message)
 			fatalError(message)
 		}
 		
+		guard reliefSoundURLS.count >= 0 else {
+			let message = "Unable to load all relief sound files for pack \(pack)."
+			print(message)
+			fatalError(message)
+		}
+		
+		// They were -- assign the number...
+		self.soundCount = warningSoundURLS.count
+		
+		// ... and instantiate the sounds!
 		for i in 0..<soundCount {
 			warningSounds.append(Sound(url: warningSoundURLS[i])!)
 			reliefSounds.append(Sound(url: reliefSoundURLS[i])!)
@@ -55,15 +72,15 @@ class SoundPack {
 	// Selects a random warning sound to play
 	func playWarningSound() {
 		let randomIndex = Int(arc4random_uniform(UInt32(soundCount)))
-		currentSound = warningSounds[randomIndex]
-		currentSound!.play()
+		SoundPack.currentSound = warningSounds[randomIndex]
+		SoundPack.currentSound!.play()
 	}
 	
 	// Selects a random relief sound to play
 	func playReliefSound() {
 		let randomIndex = Int(arc4random_uniform(UInt32(soundCount)))
-		currentSound = reliefSounds[randomIndex]
-		currentSound!.play()
+		SoundPack.currentSound = reliefSounds[randomIndex]
+		SoundPack.currentSound!.play()
 	}
 	
 	// Selects either random or warning sound (random)

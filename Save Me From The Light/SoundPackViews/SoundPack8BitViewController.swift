@@ -10,28 +10,24 @@ import UIKit
 import SwiftySound
 
 class SoundPack8BitViewController: UIViewController {
-
-	let packOne: SoundPack = SoundPack("8Bit", numberOfSounds: 3)
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()	
-    }
+	let pack: SoundPack = SoundPack("8Bit")
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+	}
 	
 	override func viewDidAppear(_ animated: Bool) {
-		
-		// Setup preference for voice pack to play
-		UserDefaults.standard.set("8Bit", forKey: "soundPack")
-		
 		// Play a random sound to preview
-		packOne.playSound()
-
+		pack.playSound()
 	}
 	
 	// When user slides out of view, stop playing the current preview
 	override func viewWillDisappear(_ animated: Bool) {
-		if let sound = packOne.currentSound {
+		if let sound = SoundPack.currentSound {
 			sound.stop()
 		}
 	}
-
+	
 }
+

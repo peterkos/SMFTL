@@ -11,13 +11,13 @@ import UserNotifications
 
 class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
 	
-	var soundPack: SoundPack?
+	static var soundPack: SoundPack?
 	
-	init(withSoundPack pack: SoundPack? = nil) {
-		soundPack = pack
+	init?(withSoundPack soundPack: SoundPack) {
+		NotificationManager.soundPack = soundPack
 	}
-
-	func warningNotification() {
+	
+	class func showWarning() {
 		
 		guard let soundPack = soundPack else {
 			print("ERROR: Initialize a sound pack first.")
@@ -39,7 +39,7 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
 		
 	}
 	
-	func reliefNotification() {
+	class func showRelief() {
 		
 		guard let soundPack = soundPack else {
 			print("ERROR: Initialize a sound pack first.")
@@ -61,7 +61,7 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
 		
 	}
 	
-	func requestNotification(_ request: UNNotificationRequest) {
+	class func requestNotification(_ request: UNNotificationRequest) {
 		let center = UNUserNotificationCenter.current()
 		center.add(request) { (error) in
 			guard error == nil else {

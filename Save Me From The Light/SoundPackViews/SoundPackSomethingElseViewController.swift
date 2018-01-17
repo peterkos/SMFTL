@@ -11,28 +11,23 @@ import SwiftySound
 
 class SoundPackSomethingElseViewController: UIViewController {
 	
-//	let packThree: SoundPack = SoundPack("SomethingElse", numberOfSounds: 3)
+	// Don't have a third unique pack just yet, so just reusing ol' Grandalf.
+	let pack: SoundPack = SoundPack("Grandalf")
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
-		
-		// Setup preference for voice pack to play
-		UserDefaults.standard.set("SomethingElse", forKey: "soundPack")
-		
 		// Play a random sound to preview
-//		packThree.playSound()
-		
+		pack.playSound()
 	}
 	
 	// When user slides out of view, stop playing the current preview
 	override func viewWillDisappear(_ animated: Bool) {
-//		if let sound = packThree.currentSound {
-//			sound.stop()
-//		}
+		if let sound = SoundPack.currentSound {
+			sound.stop()
+		}
 	}
 	
 }
-

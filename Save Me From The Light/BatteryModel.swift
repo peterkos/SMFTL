@@ -11,19 +11,14 @@ import UIKit
 
 class BatteryModel {
 	
-	private var sounds: SoundPack
-	var notificationManager: NotificationManager
-	
 	var batteryLevel: Float {
 		return UIDevice.current.batteryLevel
 	}
 	
 	@objc func batteryStateDidChange(_ notification: Notification) {
-		
 		if (UIDevice.current.batteryState == .charging) {
-			notificationManager.reliefNotification()
+			NotificationManager.showRelief()
 		}
-		
 	}
 	
 	@objc func batteryLevelDidChange(_ notification: Notification) {
@@ -36,11 +31,11 @@ class BatteryModel {
 		// Warning Sounds
 		// TODO: Notification messages!
 		if (batteryLevel == 10.0 && tenPercentWarning) {
-			notificationManager.warningNotification()
+			NotificationManager.showWarning()
 		} else if (batteryLevel == 5.0 && fivePercentWarning) {
-			notificationManager.warningNotification()
+			NotificationManager.showWarning()
 		} else if (batteryLevel == 1.0 && onePercentWarning) {
-			notificationManager.warningNotification()
+			NotificationManager.showWarning()
 		}
 		
 		
@@ -57,13 +52,6 @@ class BatteryModel {
 	}
 	
 	init() {
-		
-		// Load in sounds
-		let pack = UserDefaults.standard.string(forKey: "soundPack")!
-		sounds = SoundPack.init(pack, numberOfSounds: 3)
-		
-		notificationManager = NotificationManager(withSoundPack: sounds)
-		
 
 		// Observers for level & state change
 		UIDevice.current.isBatteryMonitoringEnabled = true
