@@ -74,7 +74,6 @@
                                 <state key="normal" title="Test Relief Notification"/>
                                 <connections>
                                     <action selector="testReliefNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Sk-rt-Ico"/>
-                                    <action selector="testWarningNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJ3-ou-mwj"/>
                                 </connections>
                             </button>
                         </subviews>
