@@ -1,0 +1,18 @@
+body {
+  background-color: #ffe8c6; }
+
+h1 {
+  font-family: "bodoni 72 oldstyle", "serif";
+  font-weight: 10;
+  font-size: 8rem;
+  color: #655959;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  text-justify: inter-word !important; }
+
+img.logo {
+  width: 512px;
+  display: block;
+  margin: 0 auto;
+  text-align: center; }
