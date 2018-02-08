@@ -20,9 +20,9 @@ class SoundPackPageViewController: UIPageViewController, UIPageViewControllerDat
 		
 		// Label for each voice pack
 		// TODO: Make functional sound previews!
-		pages.append(storyboard!.instantiateViewController(withIdentifier: "8Bit"))
-		pages.append(storyboard!.instantiateViewController(withIdentifier: "AnotherSomething"))
+		pages.append(storyboard!.instantiateViewController(withIdentifier: "Grandalf"))
 		pages.append(storyboard!.instantiateViewController(withIdentifier: "SomethingElse"))
+		pages.append(storyboard!.instantiateViewController(withIdentifier: "8Bit"))
 		
 		setViewControllers([pages.first!], direction: .forward, animated: true, completion: nil)
 	

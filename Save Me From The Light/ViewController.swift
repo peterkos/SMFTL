@@ -50,9 +50,9 @@ class ViewController: UIViewController {
 		userDeafults.synchronize()
 		
 		// Set switches on load
-		tenPercentWarningSetting.isOn  = userDeafults.bool(forKey: "tenPercentWarning")
-		fivePercentWarningSetting.isOn = userDeafults.bool(forKey: "fivePercentWarning")
-		onePercentWarningSetting.isOn  = userDeafults.bool(forKey: "onePercentWarning")
+//		tenPercentWarningSetting.isOn  = userDeafults.bool(forKey: "tenPercentWarning")
+//		fivePercentWarningSetting.isOn = userDeafults.bool(forKey: "fivePercentWarning")
+//		onePercentWarningSetting.isOn  = userDeafults.bool(forKey: "onePercentWarning")
 	
 	}
 	
