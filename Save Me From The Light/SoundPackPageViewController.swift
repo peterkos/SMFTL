@@ -57,17 +57,6 @@ class SoundPackPageViewController: UIPageViewController, UIPageViewControllerDat
 //		return 0
 //	}
 	
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-	
 	// In future, may wrap index
 	private func viewControllerAtWrappedIndex(_ index: Int) -> UIViewController? {
 		if (index >= 0 && index < pages.count) {
@@ -76,5 +65,43 @@ class SoundPackPageViewController: UIPageViewController, UIPageViewControllerDat
 			return nil
 		}
 	}
+	
+	
+	// Delegate methods
+	
+	func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+		
+		// Return if user aborted swiping
+		guard completed else {
+			return
+		}
+		
+		// Otherwise, send new color information so slider/label tint can match new "theme"
+		
+		let newVC = pageViewController.viewControllers!.first!
+		
+		if ((newVC as? SoundPackSomethingElseViewController) != nil) {
+		}
+		
+		let colorProperties: [UIColor] = []
+		
+		NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PageViewDidChange"), object: nil)
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }

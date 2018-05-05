@@ -9,7 +9,10 @@
 import UIKit
 import SwiftySound
 
-class SoundPack8BitViewController: UIViewController {
+class SoundPack8BitViewController: UIViewController, SoundPackView {
+	
+	@IBOutlet var packNumber: UILabel!
+	@IBOutlet var packName: UILabel!
 	
 	let pack: SoundPack = SoundPack("8Bit")
 	

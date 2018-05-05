@@ -11,6 +11,8 @@ import SwiftySound
 
 class SoundPackSomethingElseViewController: UIViewController {
 	
+	@IBOutlet var packNumber: UILabel!
+	@IBOutlet var packName: UILabel!
 	// Don't have a third unique pack just yet, so just reusing ol' Grandalf.
 	let pack: SoundPack = SoundPack("Grandalf")
 	

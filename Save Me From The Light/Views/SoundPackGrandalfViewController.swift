@@ -12,6 +12,9 @@ import SwiftySound
 
 class SoundPackGrandalfViewController: UIViewController {
 	
+	@IBOutlet var packNumber: UILabel!
+	@IBOutlet var packName: UILabel!
+	
 	let pack: SoundPack = SoundPack("Grandalf")
 	
 	override func viewDidLoad() {
