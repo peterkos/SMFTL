@@ -33,14 +33,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Idb-vd-Eko" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GRP-PK-CEe"/>
-                            <constraint firstItem="Idb-vd-Eko" firstAttribute="centerY" secondItem="AVK-tr-px3" secondAttribute="centerY" id="QIZ-2d-IhX"/>
-                            <constraint firstItem="AVK-tr-px3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="242" id="Qi1-9s-aIB"/>
-                            <constraint firstItem="Idb-vd-Eko" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Sqh-2S-XwJ"/>
-                            <constraint firstItem="Idb-vd-Eko" firstAttribute="leading" secondItem="AVK-tr-px3" secondAttribute="leading" id="aoE-kO-sgJ"/>
-                            <constraint firstItem="Idb-vd-Eko" firstAttribute="trailing" secondItem="AVK-tr-px3" secondAttribute="trailing" id="nzI-5q-UKf"/>
-                            <constraint firstAttribute="trailing" secondItem="Idb-vd-Eko" secondAttribute="trailing" id="rnc-Tc-JNs"/>
-                            <constraint firstItem="Idb-vd-Eko" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tIg-fh-nFT"/>
+                            <constraint firstItem="Idb-vd-Eko" firstAttribute="trailing" secondItem="AVK-tr-px3" secondAttribute="trailing" id="D9I-rO-042"/>
+                            <constraint firstItem="Idb-vd-Eko" firstAttribute="leading" secondItem="AVK-tr-px3" secondAttribute="leading" id="Jzw-6K-Y7c"/>
+                            <constraint firstItem="AVK-tr-px3" firstAttribute="centerY" secondItem="Idb-vd-Eko" secondAttribute="centerY" id="NtJ-Vk-wvK"/>
+                            <constraint firstItem="AVK-tr-px3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="242" id="OqF-4a-jAf"/>
+                            <constraint firstItem="Idb-vd-Eko" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WuU-VA-mbw"/>
+                            <constraint firstAttribute="trailing" secondItem="Idb-vd-Eko" secondAttribute="trailing" id="dEt-Ve-Qx1"/>
+                            <constraint firstItem="Idb-vd-Eko" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tM3-DX-5iC"/>
+                            <constraint firstItem="Idb-vd-Eko" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="vzb-pu-O7l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -61,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="935" y="151"/>
         </scene>
-        <!--View Controller-->
+        <!--Battery View Controller-->
         <scene sceneID="oAB-bT-fNb">
             <objects>
-                <viewController id="lbq-7C-YBo" sceneMemberID="viewController">
+                <viewController id="lbq-7C-YBo" customClass="BatteryViewController" customModule="Save_Me_From_The_Light" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k9O-MG-ctV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="142"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

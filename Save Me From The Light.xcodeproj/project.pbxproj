@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E16178C1FD7934E00756645 /* CustomContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E16178B1FD7934E00756645 /* CustomContainerView.swift */; };
 		0E4AF1E620268A7C007C98AD /* BatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4AF1E520268A7C007C98AD /* BatteryViewController.swift */; };
+		0E5B69052032A060006F316E /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B69042032A060006F316E /* BatteryView.swift */; };
 		0E5C4BC3200D452500C2AF33 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5C4BC2200D452500C2AF33 /* NotificationManager.swift */; };
 		0E5C8B7D1FEC560700A8C91D /* SoundPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5C8B7C1FEC560700A8C91D /* SoundPack.swift */; };
 		0E953FDA1FC00C5000D6D6E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E953FD91FC00C5000D6D6E6 /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		0E16178B1FD7934E00756645 /* CustomContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContainerView.swift; sourceTree = "<group>"; };
 		0E4AF1E520268A7C007C98AD /* BatteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryViewController.swift; sourceTree = "<group>"; };
+		0E5B69042032A060006F316E /* BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView.swift; sourceTree = "<group>"; };
 		0E5C4BC2200D452500C2AF33 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		0E5C8B7C1FEC560700A8C91D /* SoundPack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPack.swift; sourceTree = "<group>"; };
 		0E953FD61FC00C5000D6D6E6 /* Save Me From The Light.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Save Me From The Light.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,7 @@
 				0EF455BC1FE7A6BB00078FF6 /* SoundPack8BitViewController.swift */,
 				0EF455C01FE7A6CC00078FF6 /* SoundPackSomethingElseViewController.swift */,
 				0E4AF1E520268A7C007C98AD /* BatteryViewController.swift */,
+				0E5B69042032A060006F316E /* BatteryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				0E5C4BC3200D452500C2AF33 /* NotificationManager.swift in Sources */,
 				0EF455BF1FE7A6C400078FF6 /* SoundPackGrandalfViewController.swift in Sources */,
 				0E16178C1FD7934E00756645 /* CustomContainerView.swift in Sources */,
+				0E5B69052032A060006F316E /* BatteryView.swift in Sources */,
 				0E953FDC1FC00C5000D6D6E6 /* ViewController.swift in Sources */,
 				0E953FDA1FC00C5000D6D6E6 /* AppDelegate.swift in Sources */,
 				0E980E0A1FCE13E800F5ABED /* SoundPackPageViewController.swift in Sources */,
