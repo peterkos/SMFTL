@@ -12,8 +12,10 @@ h1
 	font-weight: 10
 	// font-size: 8vw
 	font-size: 8rem
-	color: #655959
 	text-transform: uppercase
+
+h1, p
+	color: #655959
 
 .hero
 	// border: 2px solid black
@@ -25,12 +27,11 @@ h1
 
 	.text
 		// border: 2px solid black
-		// width: 450px
+		width: 450px
 		margin: 0
-		display: inline-block
 		position: absolute
 
-		h1	
+		h1
 			// word-spacing: 100px
 			display: table-caption
 			line-height: 100px
@@ -44,13 +45,13 @@ h1
 		margin: auto
 
 
-.description 
-	border: 2px solid blue
+.description
+	// border: 2px solid blue
 	// padding-top: 300px
 	display: block
 	clear: both
 	margin: 0 10% 0 10%
-	padding-bottom: 9999px
+	// padding-bottom: 9999px
 
 	h1
 		text-align: center
@@ -63,7 +64,6 @@ h1
 		align-content: center
 		flex-wrap: wrap
 
-
 		.example
 			width: 300px
 			height: 300px
@@ -72,15 +72,17 @@ h1
 			margin-bottom: 5px
 
 
-// TODO: Add mobile stuff!
+footer
+	background-color: #FFD494
+	text-align: center
+	margin-top: 40px
+	padding: 20px
+
 
 // Smaller than 14"-ish laptop
 @media screen and (max-width: 1450px)
 
-	body
-		// background-color: #a39379
-
-	.hero 
+	.hero
 
 		img.logo
 			width: 400px
@@ -92,22 +94,24 @@ h1
 // Phones
 @media screen and (max-width: 1000px)
 
-	.hero 
+	.hero
 		flex-direction: column
-		align-items: stretch
-		padding: 30px 0 0 0
+		// align-items: stretch
+		padding: 0
 		margin: 0
 
 		.text
-			height: 100vh
+			// height: 100vh
 			position: relative
-			margin: 0 auto
-			padding: 0
+			// margin: auto
 
 			h1
 				line-height: auto
 				text-align: center
+				display: block
+				text-justify: auto
 
+		// FIXME: Font still cutting off on edge on mobile.
 		h1
 			font-size: 7rem
 			margin: 0
@@ -117,10 +121,16 @@ h1
 			height: 350px
 			margin: 40px auto
 
+	.description
+		margin: 300px 0 0 0
+
+		h1
+			font-size: 3rem
+
 
 // Phones -- removes all top and most side padding
 @media screen and (max-width: 700px)
-	
+
 	.hero
 		padding: 0
 

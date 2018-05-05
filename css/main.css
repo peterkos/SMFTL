@@ -8,8 +8,10 @@ h1 {
   font-family: "bodoni 72 oldstyle", "serif";
   font-weight: 10;
   font-size: 8rem;
-  color: #655959;
   text-transform: uppercase; }
+
+h1, p {
+  color: #655959; }
 
 .hero {
   display: flex;
@@ -18,8 +20,8 @@ h1 {
   padding: 10% 50px;
   height: 600px; }
   .hero .text {
+    width: 450px;
     margin: 0;
-    display: inline-block;
     position: absolute; }
     .hero .text h1 {
       display: table-caption;
@@ -33,11 +35,9 @@ h1 {
     margin: auto; }
 
 .description {
-  border: 2px solid blue;
   display: block;
   clear: both;
-  margin: 0 10% 0 10%;
-  padding-bottom: 9999px; }
+  margin: 0 10% 0 10%; }
   .description h1 {
     text-align: center;
     font-size: 5rem;
@@ -54,6 +54,12 @@ h1 {
       background-color: #dab9ff;
       margin-bottom: 5px; }
 
+footer {
+  background-color: #ffd494;
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px; }
+
 @media screen and (max-width: 1450px) {
   .hero img.logo {
     width: 400px;
@@ -63,24 +69,27 @@ h1 {
 @media screen and (max-width: 1000px) {
   .hero {
     flex-direction: column;
-    align-items: stretch;
-    padding: 30px 0 0 0;
+    padding: 0;
     margin: 0; }
     .hero .text {
-      height: 100vh;
-      position: relative;
-      margin: 0 auto;
-      padding: 0; }
+      position: relative; }
       .hero .text h1 {
         line-height: auto;
-        text-align: center; }
+        text-align: center;
+        display: block;
+        text-justify: auto; }
     .hero h1 {
       font-size: 7rem;
       margin: 0; }
     .hero img.logo {
       width: 350px;
       height: 350px;
-      margin: 40px auto; } }
+      margin: 40px auto; }
+
+  .description {
+    margin: 300px 0 0 0; }
+    .description h1 {
+      font-size: 3rem; } }
 @media screen and (max-width: 700px) {
   .hero {
     padding: 0; }
