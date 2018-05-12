@@ -78,14 +78,20 @@ class SoundPackPageViewController: UIPageViewController, UIPageViewControllerDat
 		
 		// Otherwise, send new color information so slider/label tint can match new "theme"
 		
+		var colorProperties: [UIColor] = []
 		let newVC = pageViewController.viewControllers!.first!
 		
-		if ((newVC as? SoundPackSomethingElseViewController) != nil) {
+		if let newVC = newVC as? ASoundPackViewController {
+			
+			// TODO: guard for nil? (may not be nessecary as values are defined explicitly in class)
+			
+			// Format mirrors protocol: [backgroundColor, tintColor, textColor]
+			colorProperties.append(newVC.tintColor!)
+			colorProperties.append(newVC.textColor!)
+			
 		}
 		
-		let colorProperties: [UIColor] = []
-		
-		NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PageViewDidChange"), object: nil)
+		NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PageViewDidChange"), object: colorProperties)
 		
 	}
 	

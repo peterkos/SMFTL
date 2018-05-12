@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E16178C1FD7934E00756645 /* CustomContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E16178B1FD7934E00756645 /* CustomContainerView.swift */; };
 		0E4AF1E620268A7C007C98AD /* BatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4AF1E520268A7C007C98AD /* BatteryViewController.swift */; };
 		0E5B69052032A060006F316E /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B69042032A060006F316E /* BatteryView.swift */; };
 		0E5C4BC3200D452500C2AF33 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5C4BC2200D452500C2AF33 /* NotificationManager.swift */; };
@@ -25,11 +24,10 @@
 		0EF455C11FE7A6CC00078FF6 /* SoundPackSomethingElseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF455C01FE7A6CC00078FF6 /* SoundPackSomethingElseViewController.swift */; };
 		0EF455C31FE7A6F300078FF6 /* BatteryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF455C21FE7A6F300078FF6 /* BatteryModel.swift */; };
 		0EF962E4209E474A0062EFF6 /* AlertSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF962E3209E474A0062EFF6 /* AlertSettingsViewController.swift */; };
-		0EF962E6209E56370062EFF6 /* SoundPackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF962E5209E56370062EFF6 /* SoundPackView.swift */; };
+		0EF962E6209E56370062EFF6 /* ASoundPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF962E5209E56370062EFF6 /* ASoundPackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E16178B1FD7934E00756645 /* CustomContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContainerView.swift; sourceTree = "<group>"; };
 		0E4AF1E520268A7C007C98AD /* BatteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryViewController.swift; sourceTree = "<group>"; };
 		0E5B69042032A060006F316E /* BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView.swift; sourceTree = "<group>"; };
 		0E5C4BC2200D452500C2AF33 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
@@ -49,7 +47,7 @@
 		0EF455C01FE7A6CC00078FF6 /* SoundPackSomethingElseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPackSomethingElseViewController.swift; sourceTree = "<group>"; };
 		0EF455C21FE7A6F300078FF6 /* BatteryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryModel.swift; sourceTree = "<group>"; };
 		0EF962E3209E474A0062EFF6 /* AlertSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSettingsViewController.swift; sourceTree = "<group>"; };
-		0EF962E5209E56370062EFF6 /* SoundPackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPackView.swift; sourceTree = "<group>"; };
+		0EF962E5209E56370062EFF6 /* ASoundPackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASoundPackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,11 +109,10 @@
 		0EF455BB1FE7A69400078FF6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0E16178B1FD7934E00756645 /* CustomContainerView.swift */,
+				0EF962E5209E56370062EFF6 /* ASoundPackViewController.swift */,
 				0EF455BE1FE7A6C400078FF6 /* SoundPackGrandalfViewController.swift */,
-				0EF962E5209E56370062EFF6 /* SoundPackView.swift */,
-				0EF455BC1FE7A6BB00078FF6 /* SoundPack8BitViewController.swift */,
 				0EF455C01FE7A6CC00078FF6 /* SoundPackSomethingElseViewController.swift */,
+				0EF455BC1FE7A6BB00078FF6 /* SoundPack8BitViewController.swift */,
 				0E4AF1E520268A7C007C98AD /* BatteryViewController.swift */,
 				0E5B69042032A060006F316E /* BatteryView.swift */,
 				0EF962E3209E474A0062EFF6 /* AlertSettingsViewController.swift */,
@@ -224,14 +221,13 @@
 				0E4AF1E620268A7C007C98AD /* BatteryViewController.swift in Sources */,
 				0E5C4BC3200D452500C2AF33 /* NotificationManager.swift in Sources */,
 				0EF455BF1FE7A6C400078FF6 /* SoundPackGrandalfViewController.swift in Sources */,
-				0E16178C1FD7934E00756645 /* CustomContainerView.swift in Sources */,
 				0E5B69052032A060006F316E /* BatteryView.swift in Sources */,
 				0EF962E4209E474A0062EFF6 /* AlertSettingsViewController.swift in Sources */,
 				0E953FDC1FC00C5000D6D6E6 /* ViewController.swift in Sources */,
 				0E953FDA1FC00C5000D6D6E6 /* AppDelegate.swift in Sources */,
 				0E980E0A1FCE13E800F5ABED /* SoundPackPageViewController.swift in Sources */,
 				0EF455C11FE7A6CC00078FF6 /* SoundPackSomethingElseViewController.swift in Sources */,
-				0EF962E6209E56370062EFF6 /* SoundPackView.swift in Sources */,
+				0EF962E6209E56370062EFF6 /* ASoundPackViewController.swift in Sources */,
 				0E5C8B7D1FEC560700A8C91D /* SoundPack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

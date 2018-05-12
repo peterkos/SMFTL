@@ -12,6 +12,7 @@ class AlertSettingsViewController: UIViewController {
 
 	@IBOutlet var alertSlider: UISlider!
 	@IBOutlet var sliderValueLabel: UILabel!
+	
 	@IBAction func alertSliderValueIsDoneChanging(_ sender: UISlider) {
 		
 		print("Value: \(Int(sender.value).description)")
@@ -33,11 +34,12 @@ class AlertSettingsViewController: UIViewController {
 		NotificationCenter.default.addObserver(self, selector: #selector(changeTint(_:)), name: NSNotification.Name(rawValue: "PageViewDidChange"), object: nil)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 	
+	/*
+	* I’d still like this to be REALTIME, but alas, this seems impossible.
+	* Possible solution: each element (particularly the sliderValueLabel) samples the color
+	* behind it to determine if it should be black or white?
+	* Ideally, the status bar should update in realtime as well. */
 	@objc func changeTint(_ notification: Notification) {
 		
 		guard notification.name.rawValue == "PageViewDidChange" else {
@@ -45,11 +47,10 @@ class AlertSettingsViewController: UIViewController {
 			return
 		}
 		
-		if (notification.name.rawValue == "PageViewDidChange") {
-			print("Changed!")
-		} else {
-			print("Wrong notification...")
-		}
+		// Format mirrors protocol: [tintColor, textColor]
+		let colors: [UIColor] = notification.object as! [UIColor]
+		alertSlider.minimumTrackTintColor = colors[0]
+		sliderValueLabel.textColor = colors[1]
 		
 	}
 	

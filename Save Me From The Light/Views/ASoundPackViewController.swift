@@ -8,8 +8,10 @@
 
 import UIKit
 
-protocol SoundPackView {
+protocol ASoundPackViewController {
 	var packNumber: UILabel! {get set}
 	var packName: UILabel! {get set}
-//	optional var backgroundColor: UIColor {get}
+	var backgroundColor: UIColor? {get set}
+	var tintColor: UIColor? {get set}
+	var textColor: UIColor? {get set}
 }
