@@ -22,7 +22,6 @@ class AlertSettingsViewController: UIViewController {
 		
 		DispatchQueue.main.async {
 			let text = Int(sender.value).description
-			
 			self.sliderValueLabel.attributedText = NSAttributedString(string: text)
 		}
 	}

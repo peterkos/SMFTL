@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -30,6 +31,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		}
 		
 //		let batteryMod = BatteryModel()
+		
+		// Instantiate model if none
+		if UserDefaults.standard.array(forKey: "alertData") == nil {
+			UserDefaults.standard.set([ReminderData(sliderNumber: 0.5, enabled: true)], forKey: "alertData")
+			print("Instantiating data model...")
+		}
 		
 		return true
 	}

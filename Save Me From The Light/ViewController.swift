@@ -13,29 +13,20 @@ import SwiftySound
 
 class ViewController: UIViewController {
 	
-	// Literally saving two words here
-	private let userDeafults = UserDefaults.standard
+	let userDefaults = UserDefaults.standard
 	
-	// OUTLETS for reading settings
-	@IBOutlet var tenPercentWarningSetting: UISwitch!
-	@IBOutlet var fivePercentWarningSetting: UISwitch!
-	@IBOutlet var onePercentWarningSetting: UISwitch!
-	
-	
-	// TODO: Move to Constants file
-	// ACTIONS for setting data
-	@IBAction func tenPercentWarningSetting(_ sender: UISwitch) {
-		userDeafults.set(sender.isOn, forKey: "tenPercentWarning")
+	@IBAction func addAlert(_ sender: Any) {
+		
+		var alertData: [ReminderData] = userDefaults.array(forKey: "alertData") as? [ReminderData] ?? []
+		alertData.append(ReminderData(sliderNumber: 0.5, enabled: true))
+		
+		userDefaults.set(alertData, forKey: "alertData")
+		userDefaults.synchronize()
+
 	}
 	
-	@IBAction func fivePercentWarningSetting(_ sender: UISwitch) {
-		userDeafults.set(sender.isOn, forKey: "fivePercentWarning")
-	}
 	
-	@IBAction func onePercentWarningSetting(_ sender: UISwitch) {
-		userDeafults.set(sender.isOn, forKey: "onePercentWarning")
-	}
-	
+	// Old functions for testing purposes later on
 	@IBAction func testWarningNotification(_ sender: Any) {
 		NotificationManager.showWarning()
 	}
@@ -47,20 +38,8 @@ class ViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		userDeafults.synchronize()
-		
-		// Set switches on load
-//		tenPercentWarningSetting.isOn  = userDeafults.bool(forKey: "tenPercentWarning")
-//		fivePercentWarningSetting.isOn = userDeafults.bool(forKey: "fivePercentWarning")
-//		onePercentWarningSetting.isOn  = userDeafults.bool(forKey: "onePercentWarning")
-	
-	}
-	
-	override func viewWillDisappear(_ animated: Bool) {
-		super.viewWillDisappear(animated)
-		userDeafults.synchronize()
+		userDefaults.synchronize()
 	}
 	
 
 }
-

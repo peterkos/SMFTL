@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E4AF1E620268A7C007C98AD /* BatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4AF1E520268A7C007C98AD /* BatteryViewController.swift */; };
-		0E5B69052032A060006F316E /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5B69042032A060006F316E /* BatteryView.swift */; };
+		0E5AA33B20DDBB7D008AE953 /* AlertSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AA33A20DDBB7D008AE953 /* AlertSettingsTableViewController.swift */; };
+		0E5AA33D20DDBF85008AE953 /* ReminderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AA33C20DDBF85008AE953 /* ReminderData.swift */; };
 		0E5C4BC3200D452500C2AF33 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5C4BC2200D452500C2AF33 /* NotificationManager.swift */; };
 		0E5C8B7D1FEC560700A8C91D /* SoundPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5C8B7C1FEC560700A8C91D /* SoundPack.swift */; };
-		0E953FDA1FC00C5000D6D6E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E953FD91FC00C5000D6D6E6 /* AppDelegate.swift */; };
+		0E8D4EB520E06BC3005100CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D4EB420E06BC3005100CA /* AppDelegate.swift */; };
 		0E953FDC1FC00C5000D6D6E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E953FDB1FC00C5000D6D6E6 /* ViewController.swift */; };
 		0E953FDF1FC00C5000D6D6E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E953FDD1FC00C5000D6D6E6 /* Main.storyboard */; };
 		0E953FE11FC00C5000D6D6E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E953FE01FC00C5000D6D6E6 /* Assets.xcassets */; };
@@ -28,12 +28,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E4AF1E520268A7C007C98AD /* BatteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryViewController.swift; sourceTree = "<group>"; };
-		0E5B69042032A060006F316E /* BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView.swift; sourceTree = "<group>"; };
+		0E5AA33A20DDBB7D008AE953 /* AlertSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSettingsTableViewController.swift; sourceTree = "<group>"; };
+		0E5AA33C20DDBF85008AE953 /* ReminderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderData.swift; sourceTree = "<group>"; };
 		0E5C4BC2200D452500C2AF33 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		0E5C8B7C1FEC560700A8C91D /* SoundPack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPack.swift; sourceTree = "<group>"; };
+		0E8D4EB420E06BC3005100CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E953FD61FC00C5000D6D6E6 /* Save Me From The Light.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Save Me From The Light.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E953FD91FC00C5000D6D6E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E953FDB1FC00C5000D6D6E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E953FDE1FC00C5000D6D6E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E953FE01FC00C5000D6D6E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +62,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E8D4EB320E06BA8005100CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0EF455C21FE7A6F300078FF6 /* BatteryModel.swift */,
+				0E5AA33C20DDBF85008AE953 /* ReminderData.swift */,
+				0E5C8B7C1FEC560700A8C91D /* SoundPack.swift */,
+				0E5C4BC2200D452500C2AF33 /* NotificationManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0E953FCD1FC00C5000D6D6E6 = {
 			isa = PBXGroup;
 			children = (
@@ -82,18 +93,15 @@
 		0E953FD81FC00C5000D6D6E6 /* Save Me From The Light */ = {
 			isa = PBXGroup;
 			children = (
-				0EF455BB1FE7A69400078FF6 /* Views */,
-				0E953FD91FC00C5000D6D6E6 /* AppDelegate.swift */,
+				0EF455BB1FE7A69400078FF6 /* Views + Controllers */,
+				0E8D4EB320E06BA8005100CA /* Models */,
 				0ED62ACB2002CF47006A41E1 /* Sounds */,
 				0E953FDB1FC00C5000D6D6E6 /* ViewController.swift */,
+				0E8D4EB420E06BC3005100CA /* AppDelegate.swift */,
 				0E953FDD1FC00C5000D6D6E6 /* Main.storyboard */,
-				0E980E091FCE13E800F5ABED /* SoundPackPageViewController.swift */,
 				0E953FE01FC00C5000D6D6E6 /* Assets.xcassets */,
 				0E953FE21FC00C5000D6D6E6 /* LaunchScreen.storyboard */,
 				0E953FE51FC00C5000D6D6E6 /* Info.plist */,
-				0EF455C21FE7A6F300078FF6 /* BatteryModel.swift */,
-				0E5C4BC2200D452500C2AF33 /* NotificationManager.swift */,
-				0E5C8B7C1FEC560700A8C91D /* SoundPack.swift */,
 			);
 			path = "Save Me From The Light";
 			sourceTree = "<group>";
@@ -106,18 +114,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0EF455BB1FE7A69400078FF6 /* Views */ = {
+		0EF455BB1FE7A69400078FF6 /* Views + Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E980E091FCE13E800F5ABED /* SoundPackPageViewController.swift */,
 				0EF962E5209E56370062EFF6 /* ASoundPackViewController.swift */,
 				0EF455BE1FE7A6C400078FF6 /* SoundPackGrandalfViewController.swift */,
 				0EF455C01FE7A6CC00078FF6 /* SoundPackSomethingElseViewController.swift */,
 				0EF455BC1FE7A6BB00078FF6 /* SoundPack8BitViewController.swift */,
-				0E4AF1E520268A7C007C98AD /* BatteryViewController.swift */,
-				0E5B69042032A060006F316E /* BatteryView.swift */,
 				0EF962E3209E474A0062EFF6 /* AlertSettingsViewController.swift */,
+				0E5AA33A20DDBB7D008AE953 /* AlertSettingsTableViewController.swift */,
 			);
-			path = Views;
+			path = "Views + Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,17 +225,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EF455BD1FE7A6BB00078FF6 /* SoundPack8BitViewController.swift in Sources */,
+				0E5AA33B20DDBB7D008AE953 /* AlertSettingsTableViewController.swift in Sources */,
 				0EF455C31FE7A6F300078FF6 /* BatteryModel.swift in Sources */,
-				0E4AF1E620268A7C007C98AD /* BatteryViewController.swift in Sources */,
 				0E5C4BC3200D452500C2AF33 /* NotificationManager.swift in Sources */,
 				0EF455BF1FE7A6C400078FF6 /* SoundPackGrandalfViewController.swift in Sources */,
-				0E5B69052032A060006F316E /* BatteryView.swift in Sources */,
 				0EF962E4209E474A0062EFF6 /* AlertSettingsViewController.swift in Sources */,
 				0E953FDC1FC00C5000D6D6E6 /* ViewController.swift in Sources */,
-				0E953FDA1FC00C5000D6D6E6 /* AppDelegate.swift in Sources */,
 				0E980E0A1FCE13E800F5ABED /* SoundPackPageViewController.swift in Sources */,
+				0E8D4EB520E06BC3005100CA /* AppDelegate.swift in Sources */,
 				0EF455C11FE7A6CC00078FF6 /* SoundPackSomethingElseViewController.swift in Sources */,
 				0EF962E6209E56370062EFF6 /* ASoundPackViewController.swift in Sources */,
+				0E5AA33D20DDBF85008AE953 /* ReminderData.swift in Sources */,
 				0E5C8B7D1FEC560700A8C91D /* SoundPack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
