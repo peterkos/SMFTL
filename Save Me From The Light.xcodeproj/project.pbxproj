@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E5AA33B20DDBB7D008AE953 /* AlertSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AA33A20DDBB7D008AE953 /* AlertSettingsTableViewController.swift */; };
-		0E5AA33D20DDBF85008AE953 /* ReminderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AA33C20DDBF85008AE953 /* ReminderData.swift */; };
+		0E5AA33D20DDBF85008AE953 /* AlertData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AA33C20DDBF85008AE953 /* AlertData.swift */; };
 		0E5C4BC3200D452500C2AF33 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5C4BC2200D452500C2AF33 /* NotificationManager.swift */; };
 		0E5C8B7D1FEC560700A8C91D /* SoundPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5C8B7C1FEC560700A8C91D /* SoundPack.swift */; };
 		0E8D4EB520E06BC3005100CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D4EB420E06BC3005100CA /* AppDelegate.swift */; };
@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		0E5AA33A20DDBB7D008AE953 /* AlertSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSettingsTableViewController.swift; sourceTree = "<group>"; };
-		0E5AA33C20DDBF85008AE953 /* ReminderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderData.swift; sourceTree = "<group>"; };
+		0E5AA33C20DDBF85008AE953 /* AlertData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertData.swift; sourceTree = "<group>"; };
 		0E5C4BC2200D452500C2AF33 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		0E5C8B7C1FEC560700A8C91D /* SoundPack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPack.swift; sourceTree = "<group>"; };
 		0E8D4EB420E06BC3005100CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				0EF455C21FE7A6F300078FF6 /* BatteryModel.swift */,
-				0E5AA33C20DDBF85008AE953 /* ReminderData.swift */,
+				0E5AA33C20DDBF85008AE953 /* AlertData.swift */,
 				0E5C8B7C1FEC560700A8C91D /* SoundPack.swift */,
 				0E5C4BC2200D452500C2AF33 /* NotificationManager.swift */,
 			);
@@ -235,7 +235,7 @@
 				0E8D4EB520E06BC3005100CA /* AppDelegate.swift in Sources */,
 				0EF455C11FE7A6CC00078FF6 /* SoundPackSomethingElseViewController.swift in Sources */,
 				0EF962E6209E56370062EFF6 /* ASoundPackViewController.swift in Sources */,
-				0E5AA33D20DDBF85008AE953 /* ReminderData.swift in Sources */,
+				0E5AA33D20DDBF85008AE953 /* AlertData.swift in Sources */,
 				0E5C8B7D1FEC560700A8C91D /* SoundPack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

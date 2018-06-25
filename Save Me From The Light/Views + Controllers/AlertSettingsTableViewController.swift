@@ -18,26 +18,42 @@ class AlertSettingsTableCell: UITableViewCell {
 class AlertSettingsTableViewController: UITableViewController {
 	
 	
-	var reminderData: [ReminderData] = []
+	var alertData: [AlertData] = []
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		// Array has already been instantiated
-		reminderData = UserDefaults.standard.array(forKey: "alertData") as! [ReminderData]
-		print("reminderData: \(reminderData)")
+		// Pull data from local store
+		if let alertDataRead = UserDefaults.standard.object(forKey: "alertData") as? Data {
+			do {
+				alertData = try JSONDecoder().decode([AlertData].self, from: alertDataRead)
+			} catch {
+				print("Unable to decode from store in AlertSettingsTableViewController")
+			}
+		} else {
+			print("Unable to read store in AlertSettingsTableViewController")
+			return
+		}
+		
+		print(alertData)
+		
+		
+		print("alertData from tableviewcontroller: \(alertData)")
 		
 	}
 	
+	override func numberOfSections(in tableView: UITableView) -> Int {
+		return 1
+	}
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return reminderData.count
+		return alertData.count
 	}
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
-		let cell = tableView.dequeueReusableCell(withIdentifier: "Label", for: indexPath) as! AlertSettingsTableCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: "alertDataCell", for: indexPath) as! AlertSettingsTableCell
 		
-		cell.percentageSlider.value = reminderData[indexPath.row].sliderNumber
+		cell.percentageSlider.value = alertData[indexPath.row].sliderNumber
 		
 		return cell
 	}

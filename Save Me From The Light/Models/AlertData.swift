@@ -9,17 +9,24 @@
 import Foundation
 
 
-
-class ReminderData {
+class AlertData: Codable, CustomStringConvertible {
 	
 	var sliderNumber: Float
 	var enabled: Bool
+	
+	var description: String {
+		return "slider: \(sliderNumber), enabled: \(enabled)"
+	}
 	
 	init(sliderNumber: Float, enabled: Bool) {
 		self.sliderNumber = sliderNumber
 		self.enabled = enabled
 	}
 	
-	// TODO: Store using NSUserDefaults
+	convenience init() {
+		self.init(sliderNumber: 0.5, enabled: true)
+	}
+	
+	
 	
 }

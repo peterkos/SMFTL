@@ -353,20 +353,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="q05-0M-z1o" customClass="AlertSettingsTableCell" customModule="Save_Me_From_The_Light" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="alertDataCell" rowHeight="77" id="q05-0M-z1o" customClass="AlertSettingsTableCell" customModule="Save_Me_From_The_Light" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q05-0M-z1o" id="rus-Kb-R1M">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="76.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bYz-rv-h8D">
-                                            <rect key="frame" x="16" y="7" width="257" height="31"/>
+                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bYz-rv-h8D">
+                                            <rect key="frame" x="16" y="-33" width="257" height="143.5"/>
                                         </slider>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="65" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0c-EM-aby">
-                                            <rect key="frame" x="279" y="7" width="83" height="30"/>
+                                            <rect key="frame" x="279" y="-33" width="83" height="142.5"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="83" id="YUg-uc-Kf9"/>
+                                                <constraint firstAttribute="width" constant="83" id="TGQ-Lo-l5X"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                             <nil key="textColor"/>
@@ -374,12 +374,13 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Y0c-EM-aby" firstAttribute="top" secondItem="bYz-rv-h8D" secondAttribute="top" id="Jxh-iw-IdG"/>
-                                        <constraint firstItem="Y0c-EM-aby" firstAttribute="leading" secondItem="bYz-rv-h8D" secondAttribute="trailing" constant="8" id="Ont-IB-Kri"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Y0c-EM-aby" secondAttribute="trailing" constant="-3" id="h3f-ur-Pd4"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Y0c-EM-aby" secondAttribute="bottom" constant="-4" id="msh-8s-n05"/>
-                                        <constraint firstItem="Y0c-EM-aby" firstAttribute="centerY" secondItem="rus-Kb-R1M" secondAttribute="centerY" id="qEN-sj-myT"/>
-                                        <constraint firstItem="Y0c-EM-aby" firstAttribute="leading" secondItem="bYz-rv-h8D" secondAttribute="trailing" constant="8" symbolic="YES" id="uuM-mU-ILK"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Y0c-EM-aby" secondAttribute="trailing" constant="-3" id="0ey-Gz-reg"/>
+                                        <constraint firstItem="bYz-rv-h8D" firstAttribute="centerY" secondItem="rus-Kb-R1M" secondAttribute="centerY" id="BsP-hm-b0l"/>
+                                        <constraint firstItem="bYz-rv-h8D" firstAttribute="bottom" secondItem="Y0c-EM-aby" secondAttribute="bottom" id="Hgd-PR-1zG"/>
+                                        <constraint firstItem="bYz-rv-h8D" firstAttribute="leading" secondItem="rus-Kb-R1M" secondAttribute="leadingMargin" constant="2" id="OBb-Qb-Iwk"/>
+                                        <constraint firstItem="Y0c-EM-aby" firstAttribute="leading" secondItem="bYz-rv-h8D" secondAttribute="trailing" constant="8" symbolic="YES" id="kmh-lG-djL"/>
+                                        <constraint firstItem="bYz-rv-h8D" firstAttribute="top" secondItem="rus-Kb-R1M" secondAttribute="topMargin" constant="-44" id="rG4-1I-Fbi"/>
+                                        <constraint firstItem="bYz-rv-h8D" firstAttribute="top" secondItem="Y0c-EM-aby" secondAttribute="top" id="vpx-Wx-vdl"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -396,7 +397,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZy-BU-HIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1247" y="805"/>
+            <point key="canvasLocation" x="1245.5999999999999" y="804.19790104947538"/>
         </scene>
     </scenes>
 </document>

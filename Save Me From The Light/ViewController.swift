@@ -13,15 +13,31 @@ import SwiftySound
 
 class ViewController: UIViewController {
 	
-	let userDefaults = UserDefaults.standard
-	
 	@IBAction func addAlert(_ sender: Any) {
 		
-		var alertData: [ReminderData] = userDefaults.array(forKey: "alertData") as? [ReminderData] ?? []
-		alertData.append(ReminderData(sliderNumber: 0.5, enabled: true))
+		var alertData: [AlertData] = []
 		
-		userDefaults.set(alertData, forKey: "alertData")
-		userDefaults.synchronize()
+		// Pull data from local store
+		if let alertDataRead = UserDefaults.standard.object(forKey: "alertData") as? Data {
+			do {
+				alertData = try JSONDecoder().decode([AlertData].self, from: alertDataRead)
+			} catch {
+				print("Unable to decode from store in main ViewController")
+			}
+		} else {
+			print("Unable to read store in main ViewController")
+			return
+		}
+		
+		// Append the new element
+		alertData.append(AlertData(sliderNumber: 0.5, enabled: true))
+		
+		print("Added element \(alertData.last!)")
+		// Write it back out
+		let alertDataWrite = try! JSONEncoder().encode(alertData)
+		UserDefaults.standard.set(alertDataWrite, forKey: "alertData")
+		
+		UserDefaults.standard.synchronize()
 
 	}
 	
@@ -38,7 +54,6 @@ class ViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		userDefaults.synchronize()
 	}
 	
 
