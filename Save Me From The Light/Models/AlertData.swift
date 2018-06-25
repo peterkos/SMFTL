@@ -9,12 +9,12 @@
 import Foundation
 
 
-class AlertData: Codable, CustomStringConvertible {
+class AlertData: NSObject, Codable {
 	
 	var sliderNumber: Float
 	var enabled: Bool
 	
-	var description: String {
+	override var description: String {
 		return "slider: \(sliderNumber), enabled: \(enabled)"
 	}
 	
@@ -23,7 +23,7 @@ class AlertData: Codable, CustomStringConvertible {
 		self.enabled = enabled
 	}
 	
-	convenience init() {
+	convenience override init() {
 		self.init(sliderNumber: 0.5, enabled: true)
 	}
 	

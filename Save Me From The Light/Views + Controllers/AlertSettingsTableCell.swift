@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlertSettingsViewController: UIViewController {
+class AlertSettingsTableCell: UITableViewCell {
 
 	@IBOutlet var alertSlider: UISlider!
 	@IBOutlet var sliderValueLabel: UILabel!
@@ -26,12 +26,11 @@ class AlertSettingsViewController: UIViewController {
 		}
 	}
 	
-	override func viewDidLoad() {
-        super.viewDidLoad()
-
-		// TODO: Move to constants file
+	override func layoutSubviews() {
+		
+		// TODO: Do this for each cell, and in add() method in main viewcontroller
 		NotificationCenter.default.addObserver(self, selector: #selector(changeTint(_:)), name: NSNotification.Name(rawValue: "PageViewDidChange"), object: nil)
-    }
+	}
 
 	
 	/*

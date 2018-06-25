@@ -30,9 +30,13 @@ class ViewController: UIViewController {
 		}
 		
 		// Append the new element
-		alertData.append(AlertData(sliderNumber: 0.5, enabled: true))
-		
+		let data = AlertData(sliderNumber: 0.5, enabled: true)
+		alertData.append(data)
 		print("Added element \(alertData.last!)")
+		
+		// Send notification
+		NotificationCenter.default.post(name: NSNotification.Name(rawValue: "UpdateAlertData"), object: data)
+		
 		// Write it back out
 		let alertDataWrite = try! JSONEncoder().encode(alertData)
 		UserDefaults.standard.set(alertDataWrite, forKey: "alertData")

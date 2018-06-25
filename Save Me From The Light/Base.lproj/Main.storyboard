@@ -25,8 +25,9 @@
                                     <segue destination="znb-8r-04L" kind="embed" id="Y5m-ng-tPn"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8k-P4-k4B">
+                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8k-P4-k4B">
                                 <rect key="frame" x="0.0" y="170" width="375" height="328"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <segue destination="214-GH-pxN" kind="embed" id="OUz-k0-Wfp"/>
                                 </connections>
@@ -297,94 +298,55 @@
             </objects>
             <point key="canvasLocation" x="-58" y="958"/>
         </scene>
-        <!--Alert Settings View Controller-->
-        <scene sceneID="Eyd-6g-CGV">
-            <objects>
-                <viewController id="Kdr-e3-n6P" customClass="AlertSettingsViewController" customModule="Save_Me_From_The_Light" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3kf-JB-VRb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qXn-CL-ajA">
-                                <rect key="frame" x="14" y="69" width="268" height="530"/>
-                                <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="alertSliderValueIsChanging:" destination="Kdr-e3-n6P" eventType="valueChanged" id="Gwu-3e-dqd"/>
-                                    <action selector="alertSliderValueIsDoneChanging:" destination="Kdr-e3-n6P" eventType="touchUpInside" id="cWg-G5-3fB"/>
-                                </connections>
-                            </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="65" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jtn-Qm-hJX">
-                                <rect key="frame" x="304" y="57" width="71" height="554"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="71" id="f3d-cg-rpr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="qXn-CL-ajA" firstAttribute="top" secondItem="4vs-o0-0Hi" secondAttribute="top" constant="49" id="2J2-vS-VgY"/>
-                            <constraint firstItem="Jtn-Qm-hJX" firstAttribute="leading" secondItem="qXn-CL-ajA" secondAttribute="trailing" constant="24" id="2ye-yx-JhJ"/>
-                            <constraint firstAttribute="trailing" secondItem="Jtn-Qm-hJX" secondAttribute="trailing" id="KU0-aj-MTf"/>
-                            <constraint firstItem="qXn-CL-ajA" firstAttribute="centerY" secondItem="3kf-JB-VRb" secondAttribute="centerY" id="TS0-WY-6tc"/>
-                            <constraint firstItem="qXn-CL-ajA" firstAttribute="centerY" secondItem="Jtn-Qm-hJX" secondAttribute="centerY" id="TqV-Cy-yfP"/>
-                            <constraint firstItem="Jtn-Qm-hJX" firstAttribute="top" secondItem="4vs-o0-0Hi" secondAttribute="top" constant="37" id="kv3-Ka-jhJ"/>
-                            <constraint firstItem="qXn-CL-ajA" firstAttribute="leading" secondItem="3kf-JB-VRb" secondAttribute="leadingMargin" id="uYe-ne-Qzc"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="4vs-o0-0Hi"/>
-                    </view>
-                    <connections>
-                        <outlet property="alertSlider" destination="qXn-CL-ajA" id="XVZ-az-wJZ"/>
-                        <outlet property="sliderValueLabel" destination="Jtn-Qm-hJX" id="KNm-tF-JAn"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V8S-Yf-n1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="602" y="957"/>
-        </scene>
         <!--Alert Settings Table View Controller-->
         <scene sceneID="7uN-tD-d8N">
             <objects>
                 <tableViewController id="214-GH-pxN" customClass="AlertSettingsTableViewController" customModule="Save_Me_From_The_Light" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="q2A-5W-OJY">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="q2A-5W-OJY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="328"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="alertDataCell" rowHeight="77" id="q05-0M-z1o" customClass="AlertSettingsTableCell" customModule="Save_Me_From_The_Light" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="alertDataCell" rowHeight="77" id="q05-0M-z1o" customClass="AlertSettingsTableCell" customModule="Save_Me_From_The_Light" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q05-0M-z1o" id="rus-Kb-R1M">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="76.5"/>
+                                <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q05-0M-z1o" id="rus-Kb-R1M">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="77"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bYz-rv-h8D">
-                                            <rect key="frame" x="16" y="-33" width="257" height="143.5"/>
+                                            <rect key="frame" x="16" y="-33" width="230" height="144"/>
+                                            <connections>
+                                                <action selector="alertSliderValueIsChanging:" destination="q05-0M-z1o" eventType="valueChanged" id="p0i-hR-Zg6"/>
+                                                <action selector="alertSliderValueIsDoneChanging:" destination="q05-0M-z1o" eventType="editingDidEnd" id="Qvk-7W-xh9"/>
+                                            </connections>
                                         </slider>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="65" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0c-EM-aby">
-                                            <rect key="frame" x="279" y="-33" width="83" height="142.5"/>
+                                            <rect key="frame" x="252" y="0.0" width="83" height="72"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="83" id="TGQ-Lo-l5X"/>
+                                                <constraint firstAttribute="width" constant="83" id="HHy-xO-CD1"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Y0c-EM-aby" secondAttribute="trailing" constant="-3" id="0ey-Gz-reg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Y0c-EM-aby" secondAttribute="bottom" constant="-6" id="2Yt-Ph-hDB"/>
+                                        <constraint firstItem="Y0c-EM-aby" firstAttribute="top" secondItem="rus-Kb-R1M" secondAttribute="top" id="91i-gC-Hfo"/>
                                         <constraint firstItem="bYz-rv-h8D" firstAttribute="centerY" secondItem="rus-Kb-R1M" secondAttribute="centerY" id="BsP-hm-b0l"/>
-                                        <constraint firstItem="bYz-rv-h8D" firstAttribute="bottom" secondItem="Y0c-EM-aby" secondAttribute="bottom" id="Hgd-PR-1zG"/>
+                                        <constraint firstItem="Y0c-EM-aby" firstAttribute="leading" secondItem="bYz-rv-h8D" secondAttribute="trailing" constant="8" symbolic="YES" id="CEQ-II-DKf"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Y0c-EM-aby" secondAttribute="trailing" constant="-2" id="IK5-7R-vvF"/>
                                         <constraint firstItem="bYz-rv-h8D" firstAttribute="leading" secondItem="rus-Kb-R1M" secondAttribute="leadingMargin" constant="2" id="OBb-Qb-Iwk"/>
-                                        <constraint firstItem="Y0c-EM-aby" firstAttribute="leading" secondItem="bYz-rv-h8D" secondAttribute="trailing" constant="8" symbolic="YES" id="kmh-lG-djL"/>
                                         <constraint firstItem="bYz-rv-h8D" firstAttribute="top" secondItem="rus-Kb-R1M" secondAttribute="topMargin" constant="-44" id="rG4-1I-Fbi"/>
-                                        <constraint firstItem="bYz-rv-h8D" firstAttribute="top" secondItem="Y0c-EM-aby" secondAttribute="top" id="vpx-Wx-vdl"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="percentageSlider" destination="bYz-rv-h8D" id="SAD-fL-xZj"/>
+                                    <outlet property="alertSlider" destination="bYz-rv-h8D" id="8xU-ST-RWH"/>
+                                    <outlet property="sliderValueLabel" destination="Y0c-EM-aby" id="99H-aH-M5Q"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -397,7 +359,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZy-BU-HIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1245.5999999999999" y="804.19790104947538"/>
+            <point key="canvasLocation" x="615" y="805"/>
         </scene>
     </scenes>
 </document>
