@@ -1,3 +1,4 @@
+
 //
 //  VoicePack2ViewController.swift
 //  Save Me From The Light
@@ -9,12 +10,27 @@
 import UIKit
 import SwiftySound
 
-class SoundPackGrandalfViewController: UIViewController {
+class SoundPackGrandalfViewController: UIViewController, ASoundPackViewController {
+	
+	@IBOutlet var packNumber: UILabel!
+	@IBOutlet var packName: UILabel!
 	
 	let pack: SoundPack = SoundPack("Grandalf")
+	var backgroundColor: UIColor?
+	var tintColor: UIColor?
+	var textColor: UIColor?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		// Set the wonderful Red color (with tint)
+		backgroundColor = #colorLiteral(red: 1, green: 0.4235294118, blue: 0.4274509804, alpha: 1)
+		tintColor = #colorLiteral(red: 1, green: 1, blue: 0.2517471591, alpha: 1)
+		textColor = UIColor.white
+		
+		self.view.backgroundColor = backgroundColor
+		self.view.tintColor = tintColor
+		
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {

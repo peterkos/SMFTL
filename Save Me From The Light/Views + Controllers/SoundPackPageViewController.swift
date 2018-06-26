@@ -20,9 +20,9 @@ class SoundPackPageViewController: UIPageViewController, UIPageViewControllerDat
 		
 		// Label for each voice pack
 		// TODO: Make functional sound previews!
-		pages.append(storyboard!.instantiateViewController(withIdentifier: "8Bit"))
-		pages.append(storyboard!.instantiateViewController(withIdentifier: "AnotherSomething"))
+		pages.append(storyboard!.instantiateViewController(withIdentifier: "Grandalf"))
 		pages.append(storyboard!.instantiateViewController(withIdentifier: "SomethingElse"))
+		pages.append(storyboard!.instantiateViewController(withIdentifier: "8Bit"))
 		
 		setViewControllers([pages.first!], direction: .forward, animated: true, completion: nil)
 	
@@ -57,17 +57,6 @@ class SoundPackPageViewController: UIPageViewController, UIPageViewControllerDat
 //		return 0
 //	}
 	
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-	
 	// In future, may wrap index
 	private func viewControllerAtWrappedIndex(_ index: Int) -> UIViewController? {
 		if (index >= 0 && index < pages.count) {
@@ -76,5 +65,49 @@ class SoundPackPageViewController: UIPageViewController, UIPageViewControllerDat
 			return nil
 		}
 	}
+	
+	
+	// Delegate methods
+	
+	func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+		
+		// Return if user aborted swiping
+		guard completed else {
+			return
+		}
+		
+		// Otherwise, send new color information so slider/label tint can match new "theme"
+		
+		var colorProperties: [UIColor] = []
+		let newVC = pageViewController.viewControllers!.first!
+		
+		if let newVC = newVC as? ASoundPackViewController {
+			
+			// TODO: guard for nil? (may not be nessecary as values are defined explicitly in class)
+			
+			// Format mirrors protocol: [backgroundColor, tintColor, textColor]
+			colorProperties.append(newVC.tintColor!)
+			colorProperties.append(newVC.textColor!)
+			
+		}
+		
+		NotificationCenter.default.post(name: NSNotification.Name(rawValue: "PageViewDidChange"), object: colorProperties)
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
